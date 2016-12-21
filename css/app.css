@@ -48,6 +48,9 @@ table {
 * {
   box-sizing: border-box; }
 
+body {
+  background-color: #343433; }
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -57,8 +60,8 @@ table {
 .hero {
   height: 500px;
   width: 100%;
-  min-width: 500px;
-  background-image: url("../img/alpine2.jpg");
+  min-width: 400px;
+  background-image: url("../img/viewpoint2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -72,38 +75,61 @@ table {
 
 .hero-overlay {
   position: relative;
-  top: 10px;
+  top: 35px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 60%;
+  height: 50%;
   width: 90%;
   min-height: 200px;
   margin: 0 auto; }
   @media (min-width: 968px) {
     .hero-overlay {
-      top: 100px;
-      height: 70%;
-      min-height: 500px; } }
+      top: 120px;
+      height: 60%;
+      min-height: 300px; } }
+  @media (max-width: 550px) {
+    .hero-overlay {
+      margin-left: 3%;
+      top: 100px; } }
 
 .hero-text {
-  font-size: 5rem; }
+  font-size: 4.5rem;
+  text-shadow: 2px 4px 3px black;
+  text-align: center;
+  position: relative;
+  top: 30px; }
   @media (min-width: 968px) {
     .hero-text {
       font-size: 7rem; } }
+  @media (max-width: 550px) {
+    .hero-text {
+      font-size: 3.3em;
+      top: 3px; } }
 
 #nav-list {
-  display: none; }
-  @media (min-width: 968px) {
-    #nav-list {
-      display: flex; } }
+  display: flex;
+  position: relative;
+  top: -60px;
+  text-shadow: 1px 2px 1px black; }
+  #nav-list li {
+    font-size: 1.2rem;
+    padding: 2px 20px; }
+    @media (min-width: 968px) {
+      #nav-list li {
+        font-size: 1.5rem;
+        position: relative;
+        top: 10px; } }
+    @media (max-width: 550px) {
+      #nav-list li {
+        font-size: .9rem; } }
 
 .nav-bar {
   display: flex;
   justify-content: space-around;
-  max-width: 1200px;
-  margin: 0 auto; }
+  max-width: 900px;
+  margin: 30px auto; }
 
 @media (min-width: 968px) {
   .nav-bar ul {
@@ -111,113 +137,97 @@ table {
     align-items: center; }
 
   .nav-bar li {
-    padding: 15px;
+    padding: 25px;
     font-family: Garamond, Georgia, serif;
     font-size: .9rem;
     letter-spacing: 2px;
     line-height: 75%; }
     .nav-bar li:hover {
       color: #22d62e;
-      cursor: pointer; }
-
-  #menu {
-    display: none; } }
-.explore {
-  display: none; }
-  @media (min-width: 968px) {
-    .explore {
-      display: block;
-      width: 175px;
-      min-height: 55px;
-      background-color: #22d62e;
-      color: white;
-      text-align: center;
-      font-size: .9rem;
-      letter-spacing: 1.5px;
-      padding-top: 18px;
-      font-family: Garamond, Georgia, serif;
-      position: relative;
-      top: 170px;
-      z-index: 3; } }
-
-#explore-triangle img {
-  display: none;
-  transform: rotate(90deg);
-  position: relative;
-  z-index: 2; }
-  @media (min-width: 968px) {
-    #explore-triangle img {
-      display: inline-block;
-      top: 100px; } }
-
-.alpine, .viewpoint {
+      cursor: pointer; } }
+.c-oregon, .s-oregon {
   height: 420px;
-  width: 100%;
+  width: 96%;
+  margin: 2%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
-  padding: 2rem; }
-  .alpine:hover, .viewpoint:hover {
+  padding: 20px; }
+  .c-oregon:hover, .s-oregon:hover {
     transition-duration: .3s; }
-    .alpine:hover .icon-bg, .viewpoint:hover .icon-bg {
+    .c-oregon:hover .icon-bg, .s-oregon:hover .icon-bg {
       cursor: pointer;
       transform: scale(1.3);
       transition: all .2s ease-in-out; }
+
+.s-oregon {
+  background-image: url("../img/winter1.jpg"); }
   @media (min-width: 968px) {
-    .alpine, .viewpoint {
-      width: 44%; } }
+    .s-oregon {
+      width: 46%; } }
 
-.alpine {
-  background-image: url("../img/crater_lake.jpg"); }
-
-.backpack, .family, .urban, .waterfall {
+.e-oregon, .sw-washington, .portland, .col-gorge {
   height: 420px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
-  padding: 30px; }
-  .backpack:hover .icon-bg, .family:hover .icon-bg, .urban:hover .icon-bg, .waterfall:hover .icon-bg {
+  padding: 20px;
+  margin: 2%; }
+  .e-oregon:hover .icon-bg, .sw-washington:hover .icon-bg, .portland:hover .icon-bg, .col-gorge:hover .icon-bg {
     cursor: pointer;
     transform: scale(1.3);
     transition: all .2s ease-in-out; }
 
-.backpack {
-  background-image: url("../img/backpacking1.jpg");
-  width: 62%; }
-  @media (min-width: 968px) {
-    .backpack {
-      width: 28%; } }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1%;
+  justify-content: space-around; }
 
-.family {
-  background-image: url("../img/family1.jpg");
-  background-position: left;
-  width: 38%; }
+.e-oregon {
+  background-image: url("../img/hiking1.jpg");
+  width: 58%; }
   @media (min-width: 968px) {
-    .family {
-      width: 28%; } }
+    .e-oregon {
+      width: 21%; } }
 
-.urban {
+.sw-washington {
+  background-image: url("../img/alpine2.jpg");
+  background-position: center;
+  width: 34%; }
+  @media (min-width: 968px) {
+    .sw-washington {
+      width: 21%; } }
+
+.portland {
   background-image: url("../img/urban2.jpg");
-  width: 38%; }
+  width: 34%; }
   @media (min-width: 968px) {
-    .urban {
-      width: 28%; } }
+    .portland {
+      width: 21%; } }
 
-.waterfall {
+.col-gorge {
   background-image: url("../img/waterfall1.jpg");
-  width: 62%; }
+  width: 58%; }
   @media (min-width: 968px) {
-    .waterfall {
-      width: 28%; } }
+    .col-gorge {
+      width: 21%; } }
 
-.viewpoint {
+.c-oregon {
   background-image: url("../img/viewpoint1.jpg"); }
+  @media (min-width: 968px) {
+    .c-oregon {
+      width: 46%; } }
+
+.bottom-container li:hover {
+  color: white;
+  cursor: pointer; }
 
 .green-bar {
   height: 5px;
-  width: 112px;
+  width: 100px;
   background-color: #3f990f;
   position: relative;
   top: 300px; }
@@ -226,58 +236,54 @@ table {
   position: relative;
   top: 320px;
   font-family: Garamond, Georgia, serif;
-  font-size: 1.35rem; }
+  font-size: 1.35rem;
+  text-shadow: 1px 2px 1.5px black; }
+
+@media (max-width: 550px) {
+  #ington {
+    display: none; } }
+@media (min-width: 550px) {
+  #ington {
+    display: inline; } }
 
 h1 {
-  font-size: 2.75em;
   font-weight: bold; }
 
-.title-text {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  float: left;
-  font-size: 1.25rem;
-  position: relative;
-  top: -5px; }
-
-.title-subtext {
+.hero-subtext {
   font-family: Garamond, Georgia, serif;
-  font-size: .9rem;
-  letter-spacing: 3px; }
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  text-shadow: 1px 2px 1.5px black;
+  z-index: 2; }
   @media (min-width: 968px) {
-    .title-subtext {
+    .hero-subtext {
       font-size: 1.5rem;
       letter-spacing: 4px; } }
+  @media (max-width: 550px) {
+    .hero-subtext {
+      font-size: .9rem; } }
 
 .ulc-logo {
   position: relative;
   top: 20px; }
 
-#hero-bar {
-  width: 300px;
-  height: 5px;
-  background-color: #fff; }
-
-#awild:hover {
-  color: #3f990f; }
-
 .mid-nav {
   display: none;
-  height: 90px;
+  height: 70px;
   width: 100vw;
-  border: 1px solid #000;
+  border-top: 1px solid #000;
   background-image: url("../img/footer-background.jpg");
   background-repeat: repeat; }
   @media (min-width: 968px) {
     .mid-nav {
       display: flex;
-      justify-content: space-between;
-      padding-left: 15%;
-      padding-right: 12%;
-      margin-right: -30px; } }
+      justify-content: space-between; } }
 
 .mid-nav ul {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 20px; }
 
 .mid-nav li {
   padding: 15px;
@@ -290,6 +296,9 @@ h1 {
 
 #green-text {
   color: #3f990f; }
+  #green-text:hover {
+    color: #fff;
+    cursor: pointer; }
 
 #white-text {
   color: #fff; }
@@ -307,7 +316,7 @@ h1 {
   height: 90px;
   width: 90px;
   border-radius: 100%;
-  margin: 80px auto; }
+  margin: 0 auto; }
 
 #raft-icon img,
 #basecamp-icon img,
@@ -333,37 +342,34 @@ h1 {
   position: relative;
   top: -30px; }
 
-#menu {
-  float: right;
+#big-logo img {
+  height: 150px;
+  width: 225px;
   position: relative;
-  top: 10px;
-  right: 50px; }
-
-#play-circle {
-  border-radius: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  min-height: 90px;
-  width: 90px;
-  position: relative;
-  top: 20px; }
-  #play-circle:hover {
-    background-color: rgba(255, 255, 255, 0.75);
-    transform: scale(1.3);
-    transition: all .2s ease-in-out;
-    transition-duration: .3s;
-    cursor: pointer; }
-
-#play-icon img {
-  height: 40px;
-  width: 35px;
-  position: relative;
-  top: 25px;
-  left: 30px; }
+  left: -200px;
+  top: 35px;
+  display: none; }
+  @media (min-width: 968px) {
+    #big-logo img {
+      display: inline-block; } }
 
 #oregon {
   display: block;
   height: 200px;
   width: 200px; }
+
+.oregon-logo img {
+  position: relative;
+  top: 20px;
+  left: 20px; }
+  @media (max-width: 550px) {
+    .oregon-logo img {
+      display: block;
+      margin: 10px auto; } }
+  @media (min-width: 968px) {
+    .oregon-logo img {
+      height: 100px;
+      width: 150px; } }
 
 .footer-top {
   background-color: #343433;
@@ -442,11 +448,11 @@ h1 {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
-  margin: 30px auto 0 auto;
+  margin: 10px auto 0 30px;
   max-width: 1200px; }
 
 #email {
-  color: #22d62e;
+  color: #3f990f;
   font-size: 1rem;
   font-family: "Helvetica Neue", Helvetica, sans-serif; }
 
@@ -457,7 +463,7 @@ h1 {
   line-height: 2rem; }
 
 #copyright {
-  color: #22d62e; }
+  color: #3f990f; }
   @media (min-width: 968px) {
     #copyright {
       position: relative;

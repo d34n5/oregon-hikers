@@ -89,13 +89,13 @@
   font-family: $font-stack-primary;
   font-weight: bold;
   font-size: 1.5rem;
-  margin: 30px auto 0 auto;
+  margin: 10px auto 0 30px;
   max-width: 1200px;
 
 }
 
 #email {
-  color: $orange;
+  color: $green;
   font-size: 1rem;
   font-family: $font-stack-primary;
 }
@@ -108,7 +108,7 @@
 }
 
 #copyright {
-  color: $orange;
+  color: $green;
   @media (min-width: 968px) {
   position: relative;
   top: 260px;
