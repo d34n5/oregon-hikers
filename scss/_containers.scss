@@ -10,7 +10,7 @@
   height: 500px;
   width: 100%;
   min-width: 500px;
-  background-image: url("../img/crater_lake.jpg");
+  background-image: url("../img/alpine2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -31,6 +31,7 @@
   align-items: center;
   justify-content: space-around;
   height: 60%;
+  width: 90%;
   min-height: 200px;
   margin: 0 auto;
   @media (min-width: 968px) {
@@ -135,17 +136,16 @@
       transition-duration: .3s;
     }
   @media (min-width: 968px) {
-    width: 50%;
+    width: 44%;
   }
 }
 
 .alpine {
-  background-image: url("../img/alpine1.jpg");
+  background-image: url("../img/crater_lake.jpg");
 }
 
 .backpack, .family, .urban, .waterfall {
   height: 420px;
-  width: 50%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -158,28 +158,43 @@
       transition: all .2s ease-in-out;
       }
     }
-  @media (min-width: 968px) {
-    width: 25%;
-  }
 }
 
 
 .backpack {
   background-image: url("../img/backpacking1.jpg");
+  width: 62%;
+  @media (min-width: 968px) {
+    width: 28%;
+  }
 }
 
 .family {
   background-image: url("../img/family1.jpg");
+  background-position: left;
+  width: 38%;
+  @media (min-width: 968px) {
+    width: 28%;
+  }
 }
 
 .urban {
   background-image: url("../img/urban2.jpg");
+  width: 38%;
+  @media (min-width: 968px) {
+    width: 28%;
+  }
 }
 
 .waterfall {
   background-image: url("../img/waterfall1.jpg");
+  width: 62%;
+  @media (min-width: 968px) {
+    width: 28%;
+  }
 }
 
 .viewpoint {
   background-image: url("../img/viewpoint1.jpg");
+
 }

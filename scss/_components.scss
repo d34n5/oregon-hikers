@@ -1,7 +1,7 @@
-.purple-bar {
+.green-bar {
   height: 5px;
-  width: 42px;
-  background-color: $purple;
+  width: 112px;
+  background-color: $green;
   position: relative;
   top: 300px;
 }
@@ -48,7 +48,7 @@ h1 {
 }
 
 #awild:hover {
-  color: $orange;
+  color: $green;
 }
 
 .mid-nav {
@@ -75,7 +75,7 @@ h1 {
 
 .mid-nav li {
   padding: 15px;
-  font-family: "Open Sans", sans-serif;
+  font-family: $font-stack-primary;
   color: $lightgrey;
   font-size: .9rem;
   &:hover {
@@ -84,14 +84,14 @@ h1 {
   }
 }
 
-#orange-text {
-  color: $orange;
+#green-text {
+  color: $green;
 }
 
 #white-text {
   color: $white;
   &:hover {
-    color: $orange;
+    color: $green;
     cursor: pointer;
   }
 }
@@ -166,4 +166,10 @@ h1 {
   position: relative;
   top: 25px;
   left: 30px;
+}
+
+#oregon {
+  display: block;
+  height: 200px;
+  width: 200px;
 }
