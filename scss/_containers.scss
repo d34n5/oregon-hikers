@@ -46,6 +46,7 @@
 }
 
 .hero-text {
+  position: relative;
   font-size: 4.5rem;
   text-shadow: 2px 4px 3px black;
   text-align: center;
@@ -53,6 +54,7 @@
   top: 10px;
   @media (min-width: 968px) {
     font-size: 7rem;
+    top: -30px;
   }
   @media (max-width: 550px) {
     font-size: 3.1em;
@@ -107,7 +109,6 @@
       cursor: pointer;
     }
   }
-
 }
 
 .c-oregon, .s-oregon {
@@ -124,10 +125,9 @@
       cursor: pointer;
       transform: scale(1.3);
       transition: all .2s ease-in-out;
-      }
-      transition-duration: .3s;
     }
-
+      transition-duration: .3s;
+  }
 }
 
 .s-oregon {

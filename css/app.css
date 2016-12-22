@@ -95,6 +95,7 @@ body {
       top: 100px; } }
 
 .hero-text {
+  position: relative;
   font-size: 4.5rem;
   text-shadow: 2px 4px 3px black;
   text-align: center;
@@ -102,7 +103,8 @@ body {
   top: 10px; }
   @media (min-width: 968px) {
     .hero-text {
-      font-size: 7rem; } }
+      font-size: 7rem;
+      top: -30px; } }
   @media (max-width: 550px) {
     .hero-text {
       font-size: 3.1em;
@@ -256,13 +258,6 @@ body {
   font-size: 1.35rem;
   text-shadow: 1px 2px 1.5px black; }
 
-@media (max-width: 550px) {
-  #ington {
-    display: none; } }
-@media (min-width: 550px) {
-  #ington {
-    display: inline; } }
-
 h1 {
   font-weight: bold; }
 
@@ -278,7 +273,7 @@ h1 {
     .hero-subtext {
       font-size: 1.5rem;
       letter-spacing: 4px;
-      top: 100px; } }
+      top: 10px; } }
   @media (max-width: 550px) {
     .hero-subtext {
       font-size: .9rem;
