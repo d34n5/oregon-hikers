@@ -86,8 +86,8 @@ body {
   margin: 0 auto; }
   @media (min-width: 968px) {
     .hero-overlay {
-      top: 120px;
-      height: 60%;
+      top: -4px;
+      height: 80%;
       min-height: 300px; } }
   @media (max-width: 550px) {
     .hero-overlay {
@@ -99,13 +99,13 @@ body {
   text-shadow: 2px 4px 3px black;
   text-align: center;
   position: relative;
-  top: 30px; }
+  top: 10px; }
   @media (min-width: 968px) {
     .hero-text {
       font-size: 7rem; } }
   @media (max-width: 550px) {
     .hero-text {
-      font-size: 3.3em;
+      font-size: 3.1em;
       top: 3px; } }
 
 #nav-list {
@@ -115,15 +115,17 @@ body {
   text-shadow: 1px 2px 1px black; }
   #nav-list li {
     font-size: 1.2rem;
-    padding: 2px 20px; }
+    margin: 2px 15px; }
     @media (min-width: 968px) {
       #nav-list li {
         font-size: 1.5rem;
         position: relative;
-        top: 10px; } }
+        top: 10px;
+        margin: 2px 20px; } }
     @media (max-width: 550px) {
       #nav-list li {
-        font-size: .9rem; } }
+        font-size: .9rem;
+        margin: 2px 10px; } }
 
 .nav-bar {
   display: flex;
@@ -165,6 +167,9 @@ body {
   background-image: url("../img/winter1.jpg"); }
   @media (min-width: 968px) {
     .s-oregon {
+      width: 96%; } }
+  @media (min-width: 1500px) {
+    .s-oregon {
       width: 46%; } }
 
 .e-oregon, .sw-washington, .portland, .col-gorge {
@@ -183,47 +188,59 @@ body {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  margin: 1%;
-  justify-content: space-around; }
+  margin: 1% auto;
+  justify-content: space-around;
+  width: 100vw; }
 
 .e-oregon {
   background-image: url("../img/hiking1.jpg");
-  width: 58%; }
+  width: 96%; }
   @media (min-width: 968px) {
+    .e-oregon {
+      width: 58%; } }
+  @media (min-width: 1500px) {
     .e-oregon {
       width: 21%; } }
 
 .sw-washington {
-  background-image: url("../img/alpine2.jpg");
+  background-image: url("../img/c-oregon1.jpg");
   background-position: center;
-  width: 34%; }
+  width: 96%; }
   @media (min-width: 968px) {
+    .sw-washington {
+      width: 34%; } }
+  @media (min-width: 1500px) {
     .sw-washington {
       width: 21%; } }
 
 .portland {
   background-image: url("../img/urban2.jpg");
-  width: 34%; }
+  width: 96%; }
   @media (min-width: 968px) {
+    .portland {
+      width: 34%; } }
+  @media (min-width: 1500px) {
     .portland {
       width: 21%; } }
 
 .col-gorge {
   background-image: url("../img/waterfall1.jpg");
-  width: 58%; }
+  width: 96%; }
   @media (min-width: 968px) {
+    .col-gorge {
+      width: 58%; } }
+  @media (min-width: 1500px) {
     .col-gorge {
       width: 21%; } }
 
 .c-oregon {
-  background-image: url("../img/viewpoint1.jpg"); }
+  background-image: url("../img/alpine2.jpg"); }
   @media (min-width: 968px) {
     .c-oregon {
+      width: 96%; } }
+  @media (min-width: 1500px) {
+    .c-oregon {
       width: 46%; } }
-
-.bottom-container li:hover {
-  color: white;
-  cursor: pointer; }
 
 .green-bar {
   height: 5px;
@@ -251,17 +268,21 @@ h1 {
 
 .hero-subtext {
   font-family: Garamond, Georgia, serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   letter-spacing: 3px;
   text-shadow: 1px 2px 1.5px black;
-  z-index: 2; }
+  z-index: 2;
+  position: relative;
+  top: -20px; }
   @media (min-width: 968px) {
     .hero-subtext {
       font-size: 1.5rem;
-      letter-spacing: 4px; } }
+      letter-spacing: 4px;
+      top: 100px; } }
   @media (max-width: 550px) {
     .hero-subtext {
-      font-size: .9rem; } }
+      font-size: .9rem;
+      top: -20px; } }
 
 .ulc-logo {
   position: relative;
@@ -277,7 +298,8 @@ h1 {
   @media (min-width: 968px) {
     .mid-nav {
       display: flex;
-      justify-content: space-between; } }
+      justify-content: space-between;
+      height: 100px; } }
 
 .mid-nav ul {
   display: flex;
@@ -293,6 +315,9 @@ h1 {
   .mid-nav li:hover {
     color: #fff;
     cursor: pointer; }
+  @media (min-width: 1200px) {
+    .mid-nav li {
+      font-size: 1.2rem; } }
 
 #green-text {
   color: #3f990f; }
@@ -346,8 +371,8 @@ h1 {
   height: 150px;
   width: 225px;
   position: relative;
-  left: -200px;
-  top: 35px;
+  top: 120px;
+  left: -80%;
   display: none; }
   @media (min-width: 968px) {
     #big-logo img {
@@ -361,7 +386,7 @@ h1 {
 .oregon-logo img {
   position: relative;
   top: 20px;
-  left: 20px; }
+  left: 15px; }
   @media (max-width: 550px) {
     .oregon-logo img {
       display: block;
@@ -369,17 +394,21 @@ h1 {
   @media (min-width: 968px) {
     .oregon-logo img {
       height: 100px;
-      width: 150px; } }
+      width: 150px;
+      left: 30px; } }
 
 .footer-top {
   background-color: #343433;
   height: 150px;
   color: #a9a9a0;
-  width: 100%;
-  min-width: 750px;
+  width: 90vw;
+  margin: 0 auto;
   padding: 2.5rem;
   border-top: 2px solid #222;
   border-bottom: 2px solid #222; }
+  @media (max-width: 550px) {
+    .footer-top {
+      padding: 2.5rem 1rem; } }
 
 .footer-bottom {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -387,13 +416,23 @@ h1 {
   background-color: #343433;
   height: 350px;
   color: #a9a9a0;
-  width: 100%;
-  padding: 2.5rem; }
+  width: 80vw;
+  padding: 2.5rem;
+  margin: 0 auto; }
+  @media (max-width: 968px) {
+    .footer-bottom {
+      padding: 2.5rem .5rem; } }
 
-@media (min-width: 968px) {
-  .bottom-container {
-    max-width: 1200px;
-    margin: 0 auto; } }
+.bottom-container {
+  width: 100vw; }
+  @media (min-width: 968px) {
+    .bottom-container {
+      width: 80vw;
+      margin: 0 auto; } }
+
+.bottom-container li:hover {
+  color: white;
+  cursor: pointer; }
 
 .footer-bottom li {
   padding: 1.25rem 1.25rem 1.25rem 0rem;
@@ -415,7 +454,7 @@ h1 {
   top: -90px; }
 
 #col-1, #col-2 {
-  width: 40%;
+  width: 25%;
   float: left;
   margin: 0 5%; }
   @media (min-width: 968px) {
@@ -448,8 +487,14 @@ h1 {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
-  margin: 10px auto 0 30px;
-  max-width: 1200px; }
+  margin: 0 auto;
+  margin-top: 10px;
+  max-width: 1200px;
+  text-align: center; }
+  @media (max-width: 550px) {
+    #copy-top {
+      font-size: 1.3rem;
+      text-align: center; } }
 
 #email {
   color: #3f990f;

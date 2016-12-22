@@ -35,8 +35,8 @@
   min-height: 200px;
   margin: 0 auto;
   @media (min-width: 968px) {
-    top: 120px;
-    height: 60%;
+    top: -4px;
+    height: 80%;
     min-height: 300px;
   }
   @media (max-width: 550px) {
@@ -50,12 +50,12 @@
   text-shadow: 2px 4px 3px black;
   text-align: center;
   position: relative;
-  top: 30px;
+  top: 10px;
   @media (min-width: 968px) {
     font-size: 7rem;
   }
   @media (max-width: 550px) {
-    font-size: 3.3em;
+    font-size: 3.1em;
     top: 3px;
   }
 }
@@ -67,14 +67,16 @@
     text-shadow: 1px 2px 1px black;
     li {
       font-size: 1.2rem;
-      padding: 2px 20px;
+      margin: 2px 15px;
       @media (min-width: 968px) {
         font-size: 1.5rem;
         position: relative;
         top: 10px;
+        margin: 2px 20px;
     }
       @media (max-width: 550px) {
         font-size: .9rem;
+        margin: 2px 10px;
       }
   }
 }
@@ -131,7 +133,10 @@
 .s-oregon {
   background-image: url("../img/winter1.jpg");
   @media (min-width: 968px) {
-    width: 46%
+    width: 96%
+  }
+  @media (min-width: 1500px) {
+    width: 46%;
   }
 }
 
@@ -155,54 +160,63 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  margin: 1%;
+  margin: 1% auto;
   justify-content: space-around;
+  width: 100vw;
 }
 
 
 .e-oregon {
   background-image: url("../img/hiking1.jpg");
-  width: 58%;
+  width: 96%;
   @media (min-width: 968px) {
+    width: 58%;
+  }
+  @media (min-width: 1500px) {
     width: 21%;
   }
 }
 
 .sw-washington {
-  background-image: url("../img/alpine2.jpg");
+  background-image: url("../img/c-oregon1.jpg");
   background-position: center;
-  width: 34%;
+  width: 96%;
   @media (min-width: 968px) {
+    width: 34%;
+  }
+  @media (min-width: 1500px) {
     width: 21%;
   }
 }
 
 .portland {
   background-image: url("../img/urban2.jpg");
-  width: 34%;
+  width: 96%;
   @media (min-width: 968px) {
+    width: 34%;
+  }
+  @media (min-width: 1500px) {
     width: 21%;
   }
 }
 
 .col-gorge {
   background-image: url("../img/waterfall1.jpg");
-  width: 58%;
+  width: 96%;
   @media (min-width: 968px) {
+    width: 58%;
+  }
+  @media (min-width: 1500px) {
     width: 21%;
   }
 }
 
 .c-oregon {
-  background-image: url("../img/viewpoint1.jpg");
+  background-image: url("../img/alpine2.jpg");
   @media (min-width: 968px) {
-    width: 46%;
+    width: 96%;
   }
-}
-
-.bottom-container li {
-  &:hover {
-    color: white;
-    cursor: pointer;
+  @media (min-width: 1500px) {
+    width: 46%
   }
 }
