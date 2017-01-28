@@ -1,3 +1,8 @@
+
+h1 {
+  font-weight: bold;
+}
+
 .green-bar {
   height: 5px;
   width: 100px;
@@ -11,30 +16,7 @@
   top: 320px;
   font-family: $font-stack-secondary;
   font-size: 1.35rem;
-  text-shadow: 1px 2px 1.5px black;
-}
-
-h1 {
-  font-weight: bold;
-}
-
-.hero-subtext {
-  font-family: $font-stack-secondary;
-  font-size: 1rem;
-  letter-spacing: 3px;
-  text-shadow: 1px 2px 1.5px black;
-  z-index: 2;
-  position: relative;
-  top: -20px;
-  @media (min-width: 968px) {
-    font-size: 1.5rem;
-    letter-spacing: 4px;
-    top: 70px;
-  }
-  @media (max-width: 550px) {
-    font-size: .9rem;
-    top: -20px;
-  }
+  text-shadow: $text-shadow;
 }
 
 .ulc-logo {
@@ -77,6 +59,29 @@ h1 {
   }
 }
 
+.oregon-logo img {
+  position: relative;
+  top: 20px;
+  left: 15px;
+  @media (max-width: 550px) {
+    display: block;
+    margin: 10px auto;
+  }
+  @media (min-width: 968px) {
+    height: 100px;
+    width: 150px;
+    left: 30px;
+  }
+}
+
+.icon-bg {
+  background-image: url(../img/icon-background.png);
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+  margin: 0 auto;
+}
+
 #green-text {
   color: $green;
   &:hover {
@@ -99,32 +104,17 @@ h1 {
   right: 70px;
 }
 
-.icon-bg {
-  background-image: url(../img/icon-background.png);
-  height: 90px;
-  width: 90px;
-  border-radius: 100%;
-  margin: 0 auto;
-}
-
-#raft-icon img,
-#basecamp-icon img,
-#canoe-icon img,
-#backpacking-icon img,
-#photo-icon img,
-#custom-icon img {
+#s-oregon-icon img,
+#sw-washington-icon img,
+#gorge-icon img,
+#c-oregon-icon img,
+#e-oregon-icon img,
+#portland-icon img {
   height: 45px;
   width: 45px;
   position: relative;
   top: 22px;
   left: 23px;
-}
-
-#canoe-icon img {
-  height: 55px;
-  width: 55px;
-  top: 15px;
-  left: 18px;
 }
 
 #small-logo {
@@ -143,30 +133,12 @@ h1 {
   display: none;
   @media (min-width: 968px) {
     display: inline-block;
-
-  }
-  @media (min-width: 1200px) {
-
-  }
 }
+
 
 #oregon {
   display: block;
   height: 200px;
   width: 200px;
 }
-
-.oregon-logo img {
-  position: relative;
-  top: 20px;
-  left: 15px;
-  @media (max-width: 550px) {
-    display: block;
-    margin: 10px auto;
-  }
-  @media (min-width: 968px) {
-    height: 100px;
-    width: 150px;
-    left: 30px;
-  }
 }

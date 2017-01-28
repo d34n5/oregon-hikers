@@ -57,86 +57,6 @@ body {
   width: 100%;
   overflow: hidden; }
 
-.hero {
-  height: 500px;
-  width: 100%;
-  min-width: 400px;
-  min-height: 800px;
-  background-image: url("../img/viewpoint2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #fff;
-  padding: 2rem;
-  padding-top: 4rem; }
-  @media (min-width: 968px) {
-    .hero {
-      height: 100vh;
-      min-height: 1200px;
-      padding-top: 4rem; } }
-
-.hero-overlay {
-  position: relative;
-  top: 135px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 50%;
-  width: 90%;
-  min-height: 200px;
-  margin: 0 auto; }
-  @media (min-width: 968px) {
-    .hero-overlay {
-      top: 50px;
-      height: 80%;
-      min-height: 300px; } }
-  @media (max-width: 550px) {
-    .hero-overlay {
-      margin-left: 3%;
-      top: 200px; } }
-
-.hero-text {
-  position: relative;
-  font-size: 4.5rem;
-  text-shadow: 2px 4px 3px black;
-  text-align: center;
-  position: relative;
-  top: 10px; }
-  @media (min-width: 968px) {
-    .hero-text {
-      font-size: 7rem;
-      top: -50px; } }
-  @media (max-width: 550px) {
-    .hero-text {
-      font-size: 3.1em;
-      top: -50px; } }
-
-#nav-list {
-  display: flex;
-  position: relative;
-  top: -60px;
-  text-shadow: 1px 2px 1px black; }
-  #nav-list li {
-    font-size: 1.2rem;
-    margin: 2px 15px; }
-    @media (min-width: 968px) {
-      #nav-list li {
-        font-size: 1.5rem;
-        position: relative;
-        top: 10px;
-        margin: 2px 20px; } }
-    @media (max-width: 550px) {
-      #nav-list li {
-        font-size: .9rem;
-        margin: 2px 10px; } }
-
-.nav-bar {
-  display: flex;
-  justify-content: space-around;
-  max-width: 900px;
-  margin: 30px auto; }
-
 @media (min-width: 968px) {
   .nav-bar ul {
     display: flex;
@@ -176,7 +96,7 @@ body {
     .s-oregon {
       width: 46%; } }
 
-.e-oregon, .sw-washington, .portland, .col-gorge {
+.e-oregon, .col-gorge, .sw-washington, .portland, .portland, .col-gorge {
   height: 420px;
   background-size: cover;
   background-position: center;
@@ -184,7 +104,7 @@ body {
   color: #fff;
   padding: 20px;
   margin: 2%; }
-  .e-oregon:hover .icon-bg, .sw-washington:hover .icon-bg, .portland:hover .icon-bg, .col-gorge:hover .icon-bg {
+  .e-oregon:hover .icon-bg, .col-gorge:hover .icon-bg, .sw-washington:hover .icon-bg, .portland:hover .icon-bg, .portland:hover .icon-bg, .col-gorge:hover .icon-bg {
     cursor: pointer;
     transform: scale(1.3);
     transition: all .2s ease-in-out; }
@@ -196,46 +116,32 @@ body {
   justify-content: space-around;
   width: 100vw; }
 
-.e-oregon {
+.e-oregon, .col-gorge {
   background-image: url("../img/hiking1.jpg");
   width: 96%; }
   @media (min-width: 968px) {
-    .e-oregon {
+    .e-oregon, .col-gorge {
       width: 58%; } }
   @media (min-width: 1500px) {
-    .e-oregon {
+    .e-oregon, .col-gorge {
       width: 21%; } }
 
-.sw-washington {
+.sw-washington, .portland {
   background-image: url("../img/c-oregon1.jpg");
   background-position: center;
   width: 96%; }
   @media (min-width: 968px) {
-    .sw-washington {
+    .sw-washington, .portland {
       width: 34%; } }
   @media (min-width: 1500px) {
-    .sw-washington {
+    .sw-washington, .portland {
       width: 21%; } }
 
 .portland {
-  background-image: url("../img/urban2.jpg");
-  width: 96%; }
-  @media (min-width: 968px) {
-    .portland {
-      width: 34%; } }
-  @media (min-width: 1500px) {
-    .portland {
-      width: 21%; } }
+  background-image: url("../img/urban2.jpg"); }
 
 .col-gorge {
-  background-image: url("../img/waterfall1.jpg");
-  width: 96%; }
-  @media (min-width: 968px) {
-    .col-gorge {
-      width: 58%; } }
-  @media (min-width: 1500px) {
-    .col-gorge {
-      width: 21%; } }
+  background-image: url("../img/waterfall1.jpg"); }
 
 .c-oregon {
   background-image: url("../img/alpine2.jpg"); }
@@ -245,6 +151,9 @@ body {
   @media (min-width: 1500px) {
     .c-oregon {
       width: 46%; } }
+
+h1 {
+  font-weight: bold; }
 
 .green-bar {
   height: 5px;
@@ -259,27 +168,6 @@ body {
   font-family: Garamond, Georgia, serif;
   font-size: 1.35rem;
   text-shadow: 1px 2px 1.5px black; }
-
-h1 {
-  font-weight: bold; }
-
-.hero-subtext {
-  font-family: Garamond, Georgia, serif;
-  font-size: 1rem;
-  letter-spacing: 3px;
-  text-shadow: 1px 2px 1.5px black;
-  z-index: 2;
-  position: relative;
-  top: -20px; }
-  @media (min-width: 968px) {
-    .hero-subtext {
-      font-size: 1.5rem;
-      letter-spacing: 4px;
-      top: 70px; } }
-  @media (max-width: 550px) {
-    .hero-subtext {
-      font-size: .9rem;
-      top: -20px; } }
 
 .ulc-logo {
   position: relative;
@@ -316,6 +204,27 @@ h1 {
     .mid-nav li {
       font-size: 1.2rem; } }
 
+.oregon-logo img {
+  position: relative;
+  top: 20px;
+  left: 15px; }
+  @media (max-width: 550px) {
+    .oregon-logo img {
+      display: block;
+      margin: 10px auto; } }
+  @media (min-width: 968px) {
+    .oregon-logo img {
+      height: 100px;
+      width: 150px;
+      left: 30px; } }
+
+.icon-bg {
+  background-image: url(../img/icon-background.png);
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+  margin: 0 auto; }
+
 #green-text {
   color: #3f990f; }
   #green-text:hover {
@@ -333,30 +242,17 @@ h1 {
   top: 30px;
   right: 70px; }
 
-.icon-bg {
-  background-image: url(../img/icon-background.png);
-  height: 90px;
-  width: 90px;
-  border-radius: 100%;
-  margin: 0 auto; }
-
-#raft-icon img,
-#basecamp-icon img,
-#canoe-icon img,
-#backpacking-icon img,
-#photo-icon img,
-#custom-icon img {
+#s-oregon-icon img,
+#sw-washington-icon img,
+#gorge-icon img,
+#c-oregon-icon img,
+#e-oregon-icon img,
+#portland-icon img {
   height: 45px;
   width: 45px;
   position: relative;
   top: 22px;
   left: 23px; }
-
-#canoe-icon img {
-  height: 55px;
-  width: 55px;
-  top: 15px;
-  left: 18px; }
 
 #small-logo {
   float: left;
@@ -374,25 +270,10 @@ h1 {
   @media (min-width: 968px) {
     #big-logo img {
       display: inline-block; } }
-
-#oregon {
-  display: block;
-  height: 200px;
-  width: 200px; }
-
-.oregon-logo img {
-  position: relative;
-  top: 20px;
-  left: 15px; }
-  @media (max-width: 550px) {
-    .oregon-logo img {
-      display: block;
-      margin: 10px auto; } }
-  @media (min-width: 968px) {
-    .oregon-logo img {
-      height: 100px;
-      width: 150px;
-      left: 30px; } }
+  #big-logo img #oregon {
+    display: block;
+    height: 200px;
+    width: 200px; }
 
 .footer-top {
   background-color: #343433;
@@ -433,7 +314,7 @@ h1 {
 
 .footer-bottom li {
   padding: 1.25rem 1.25rem 1.25rem 0rem;
-  border-bottom: 1px solid #646461; }
+  border-bottom: 1px solid #343433; }
 
 .design {
   color: #fff;
@@ -517,5 +398,103 @@ h1 {
     position: relative;
     bottom: 240px;
     left: 540px; } }
+
+.hero-subtext {
+  font-family: Garamond, Georgia, serif;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  text-shadow: 1px 2px 1.5px black;
+  z-index: 2;
+  position: relative;
+  top: -20px; }
+  @media (min-width: 968px) {
+    .hero-subtext {
+      font-size: 1.5rem;
+      letter-spacing: 4px;
+      top: 70px; } }
+  @media (max-width: 550px) {
+    .hero-subtext {
+      font-size: .9rem;
+      top: -20px; } }
+
+.hero {
+  height: 500px;
+  width: 100%;
+  min-width: 400px;
+  min-height: 800px;
+  background-image: url("../img/viewpoint2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  padding: 2rem;
+  padding-top: 4rem; }
+  @media (min-width: 968px) {
+    .hero {
+      height: 100vh;
+      min-height: 1200px;
+      padding-top: 4rem; } }
+
+.hero-overlay {
+  position: relative;
+  top: 135px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 50%;
+  width: 90%;
+  min-height: 200px;
+  margin: 0 auto; }
+  @media (min-width: 968px) {
+    .hero-overlay {
+      top: 50px;
+      height: 80%;
+      min-height: 300px; } }
+  @media (max-width: 550px) {
+    .hero-overlay {
+      margin-left: 3%;
+      top: 200px; } }
+
+.hero-text {
+  position: relative;
+  font-size: 4.5rem;
+  text-shadow: 2px 4px 3px black;
+  text-align: center;
+  position: relative;
+  top: 10px; }
+  @media (min-width: 968px) {
+    .hero-text {
+      font-size: 7rem;
+      top: -50px; } }
+  @media (max-width: 550px) {
+    .hero-text {
+      font-size: 3.1em;
+      top: -50px; } }
+
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  max-width: 900px;
+  margin: 30px auto; }
+
+#nav-list {
+  display: flex;
+  position: relative;
+  top: -60px;
+  text-shadow: 1px 2px 1px black; }
+  #nav-list li {
+    font-size: 1.2rem;
+    margin: 2px 15px; }
+    @media (min-width: 968px) {
+      #nav-list li {
+        font-size: 1.5rem;
+        position: relative;
+        top: 10px;
+        margin: 2px 20px; } }
+    @media (max-width: 550px) {
+      #nav-list li {
+        font-size: .9rem;
+        margin: 2px 10px; } }
 
 /*# sourceMappingURL=app.css.map */
