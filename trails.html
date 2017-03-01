@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Oregon Hikers - Trails</title>
+    <!--Dependencies-->
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel="import" href="bower_components/vaadin-grid/vaadin-grid.html">
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <!--Styles-->
+    <!-- <link rel="import" href="../zep-styles/color.html">
+    <link rel="import" href="../paper-styles/paper-styles.html">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Noto+Sans|Roboto"> -->
+
+
+  </head>
+  <body>
+
+
+    <p>body start</p>
+    <link rel="import" href="bower_components/emoji-rain/emoji-rain.html">
+    ...
+    <emoji-rain active>1<br><BR><br>2</emoji-rain>
+    <dom-module id="trails-grid">
+        <template>
+            <style include="shared-styles">
+                * {
+                    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                }
+
+                vaadin-grid {
+                    --primary-color: #3f990f;
+                }
+
+                span {
+                    overflow: visible;
+                }
+
+            </style>
+            <p> table start:</p>
+            <vaadin-grid frozen-columns="2" selection-mode="multi" items=[[data]] id="grid-sorting-data">
+                <table>
+                    <colgroup>
+                        <col sortable resizable flex="1" class="col">
+                        <col sortable resizable flex="1" class="col">
+                        <col sortable resizable hidable flex="2" class="col">
+                        <col sortable resizable hidable flex="1" class="col">
+                        <col sortable resizable hidable flex="1" hidden class="col">
+                        <col sortable resizable hidable flex="2" hidden class="col">
+                        <col sortable resizable hidable flex="1" hidden class="col">
+                        <col sortable resizable hidable flex="1" hidden class="col">
+                        <col sortable resizable hidable flex="1" hidden class="col">
+                        <col sortable resizable hidable flex="1" hidden class="col">
+                        <col sortable resizable hidable flex="1" class="col">
+                        <col sortable resizable hidable flex="1" class="col">
+                        <col sortable resizable hidable flex="1" hidden class="col">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th class="th"><h3>Trail</h3></th>
+                        <th class="th"><h3>Location</h3></th>
+                        <th class="th"><h3>Distance</h3></th>
+                        <th class="th"><h3>Difficulty</h3></th>
+                        <th class="th"><h3>Elevation Start</h3></th>
+                        <th class="th"><h3>Elevation End</h3></th>
+                        <th class="th"><h3>Elevation Change</h3></th>
+                        <th class="th"><h3>Detail D</h3></th>
+                        <th class="th"><h3>Detail E</h3></th>
+                        <th class="th"><h3>F</h3></th>
+                        <th class="th"><h3>g</h3></th>
+                        <th class="th"><h3>h</h3></th>
+                        <th class="th"><h3>9</h3></th>
+                    </tr>
+                    </thead>
+                </table>
+            </vaadin-grid>
+        </template>
+
+        <script>
+            Polymer({
+                is: 'trails-grid',
+
+                listeners: {
+                  'sort-order-changed': 'changeSortOrder'
+                },
+
+                properties: {
+                    data: {
+                        type: Array,
+                        value: [
+                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
+                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
+                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
+                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
+                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
+                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
+                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
+                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
+                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
+                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
+                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
+                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
+                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
+                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i']
+                        ]
+                    }
+                },
+
+                changeSortOrder: function(e) {
+                    console.log(this.$['grid-sorting-data'].sortOrder);
+                    var idx = this.$['grid-sorting-data'].sortOrder[0].column;
+                    var lesser = this.$['grid-sorting-data'].sortOrder[0].direction == 'asc' ? -1 : 1;
+                    this.data = this.data.sort(function (a, b) {
+                        return (a[idx] < b[idx]) ? lesser : -lesser;
+                    });
+                }
+            });
+        </script>
+    </dom-module>
+
+
+  </body>
+</html>

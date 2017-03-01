@@ -9,7 +9,7 @@
   @media (min-width: 968px) {
     font-size: 1.5rem;
     letter-spacing: 4px;
-    top: 70px;
+    top: 0px;
   }
   @media (max-width: 550px) {
     font-size: .9rem;
@@ -19,10 +19,10 @@
 
 
 .hero {
-  height: 500px;
+  // height: 500px;
   width: 100%;
-  min-width: 400px;
-  min-height: 800px;
+  min-width: 300px;
+  min-height: 500px;
   background-image: url("../img/viewpoint2-comp.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,15 +31,15 @@
   padding: 2rem;
   padding-top : 4rem;
   @media (min-width: 968px){
-    height: 100vh;
-    min-height: 1200px;
+    height: 80vh;
+    min-height: 600px;
     padding-top: 4rem;
   }
 }
 
 .hero-overlay {
   position: relative;
-  top: 135px;
+  top: 35px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,13 +49,13 @@
   min-height: 200px;
   margin: 0 auto;
   @media (min-width: 968px) {
-    top: 50px;
+    top: -35px;
     height: 80%;
     min-height: 300px;
   }
   @media (max-width: 550px) {
     margin-left: 3%;
-    top: 200px;
+    top: 100px;
   }
 }
 
