@@ -29,7 +29,7 @@ h1 {
   height: 70px;
   width: 100vw;
   border-top: 1px solid $black;
-  background-image: url("../img/footer-background.jpg");;
+  // background-image: url("../img/footer-background.jpg");
   background-repeat: repeat;
   @media (min-width: 968px) {
     display: flex;
@@ -75,7 +75,7 @@ h1 {
 }
 
 .icon-bg {
-  background-image: url(../img/icon-background.png);
+  background-image: url(../img/icon-background-comp.png);
   height: 90px;
   width: 90px;
   border-radius: 100%;

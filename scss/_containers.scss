@@ -45,7 +45,7 @@
 }
 
 .s-oregon {
-  background-image: url("../img/winter1.jpg");
+  background-image: url("../img/winter1-comp.jpg");
   @media (min-width: 968px) {
     width: 96%
   }
@@ -80,7 +80,7 @@
 }
 
 .e-oregon {
-  background-image: url("../img/hiking1.jpg");
+  background-image: url("../img/hiking1-comp.jpg");
   width: 96%;
   @media (min-width: 968px) {
     width: 58%;
@@ -91,7 +91,7 @@
 }
 
 .sw-washington {
-  background-image: url("../img/c-oregon1.jpg");
+  background-image: url("../img/c-oregon1-comp.jpg");
   background-position: center;
   width: 96%;
   @media (min-width: 968px) {
@@ -104,16 +104,16 @@
 
 .portland {
   @extend .sw-washington;
-  background-image: url("../img/urban2.jpg");
+  background-image: url("../img/urban2-comp.jpg");
 }
 
 .col-gorge {
   @extend .e-oregon;
-  background-image: url("../img/waterfall1.jpg");
+  background-image: url("../img/waterfall1-comp.jpg");
 }
 
 .c-oregon {
-  background-image: url("../img/alpine2.jpg");
+  background-image: url("../img/alpine2-comp.jpg");
   @media (min-width: 968px) {
     width: 96%;
   }
