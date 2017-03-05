@@ -1,0 +1,22 @@
+{
+  "name": "oregon-hikers",
+  "homepage": "https://github.com/d34n5/oregon-hikers",
+  "authors": [
+    "Dean Scelza <deanscelza@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "emoji-rain": "^1.0.4",
+    "vaadin-grid": "vaadin/vaadin-grid#^1.2.1",
+    "polymer": "Polymer/polymer#^1.8.1"
+  }
+}

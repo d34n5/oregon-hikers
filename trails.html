@@ -7,120 +7,124 @@
     <!--Dependencies-->
     <link rel="import" href="bower_components/polymer/polymer.html">
     <link rel="import" href="bower_components/vaadin-grid/vaadin-grid.html">
-
     <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 
-    <!--Styles-->
-    <!-- <link rel="import" href="../zep-styles/color.html">
-    <link rel="import" href="../paper-styles/paper-styles.html">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Noto+Sans|Roboto"> -->
+    <style>
+      #trails-body {
+        background-color: ivory;
+      }
 
+      vaadin-grid {
+          --primary-color: #3f990f;
+      }
 
+    </style>
   </head>
-  <body>
-
-
-    <p>body start</p>
-    <link rel="import" href="bower_components/emoji-rain/emoji-rain.html">
-    ...
-    <emoji-rain active>1<br><BR><br>2</emoji-rain>
-    <dom-module id="trails-grid">
+  <body id="trails-body">
+      <dom-module id="trails-grid">
         <template>
-            <style include="shared-styles">
-                * {
-                    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-                }
+          <style include="shared-styles">
+            * {
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            }
 
-                vaadin-grid {
-                    --primary-color: #3f990f;
-                }
+            vaadin-grid {
+                --primary-color: #3f990f;
+            }
 
-                span {
-                    overflow: visible;
-                }
+            span {
+                overflow: visible;
+            }
 
-            </style>
-            <p> table start:</p>
-            <vaadin-grid frozen-columns="2" selection-mode="multi" items=[[data]] id="grid-sorting-data">
-                <table>
-                    <colgroup>
-                        <col sortable resizable flex="1" class="col">
-                        <col sortable resizable flex="1" class="col">
-                        <col sortable resizable hidable flex="2" class="col">
-                        <col sortable resizable hidable flex="1" class="col">
-                        <col sortable resizable hidable flex="1" hidden class="col">
-                        <col sortable resizable hidable flex="2" hidden class="col">
-                        <col sortable resizable hidable flex="1" hidden class="col">
-                        <col sortable resizable hidable flex="1" hidden class="col">
-                        <col sortable resizable hidable flex="1" hidden class="col">
-                        <col sortable resizable hidable flex="1" hidden class="col">
-                        <col sortable resizable hidable flex="1" class="col">
-                        <col sortable resizable hidable flex="1" class="col">
-                        <col sortable resizable hidable flex="1" hidden class="col">
-                    </colgroup>
-                    <thead>
-                    <tr>
-                        <th class="th"><h3>Trail</h3></th>
-                        <th class="th"><h3>Location</h3></th>
-                        <th class="th"><h3>Distance</h3></th>
-                        <th class="th"><h3>Difficulty</h3></th>
-                        <th class="th"><h3>Elevation Start</h3></th>
-                        <th class="th"><h3>Elevation End</h3></th>
-                        <th class="th"><h3>Elevation Change</h3></th>
-                        <th class="th"><h3>Detail D</h3></th>
-                        <th class="th"><h3>Detail E</h3></th>
-                        <th class="th"><h3>F</h3></th>
-                        <th class="th"><h3>g</h3></th>
-                        <th class="th"><h3>h</h3></th>
-                        <th class="th"><h3>9</h3></th>
-                    </tr>
-                    </thead>
-                </table>
-            </vaadin-grid>
+          </style>
         </template>
-
+        <p> Grid2:</p>
+        <vaadin-grid frozen-columns="1" selection-mode="multi" items=[[data]] id="grid-sorting-data">
+          <table>
+            <colgroup>
+              <col sortable resizable flex="3" class="col">
+              <col sortable resizable flex="1" class="col">
+              <col sortable resizable hidable flex="1" class="col">
+              <col sortable resizable hidable flex="1" class="col">
+              <col sortable resizable hidable hidden flex="1" class="col">
+              <col sortable resizable hidable hidden flex="1" class="col">
+              <col sortable resizable hidable flex="1" class="col">
+              <col sortable resizable hidable flex="1" class="col">
+              <col sortable resizable hidable flex="1" class="col">
+              <col sortable resizable hidable flex="1" class="col">
+              <col sortable resizable hidable flex="1" class="col">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="th"><h3>Trail Name/Number</h3></th>
+                <th class="th"><h3>Location</h3></th>
+                <th class="th"><h3>Distance (mi.)</h3></th>
+                <th class="th"><h3>Difficulty</h3></th>
+                <th class="th"><h3>Elevation Start(ft.)</h3></th>
+                <th class="th"><h3>Elevation End(ft.)</h3></th>
+                <th class="th"><h3>Elevation +/-(ft.)</h3></th>
+                <th class="th"><h3>TrailHead</h3></th>
+                <th class="th"><h3>Seasons</h3></th>
+                <th class="th"><h3>Type</h3></th>
+                <th class="th"><h3>Popularity</h3></th>
+              </tr>
+            </thead>
+          </table>
+        </vaadin-grid>
+        </template>
         <script>
-            Polymer({
-                is: 'trails-grid',
+          var grid = document.getElementById('grid-sorting-data');
 
-                listeners: {
-                  'sort-order-changed': 'changeSortOrder'
-                },
+          var data = [
+            ['Council Bluff', 'SW Washington', 3.4, 'Moderate', '4200ft', '5400ft', '1200ft', 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
+            ['Council Bluff', 'SW Washington', 3.4, 'Moderate', '4200ft', '5400ft', '1200ft', 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
+            ['Council Bluff', 'SW Washington', 3.4, 'Moderate', '4200ft', '5400ft', '1200ft', 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
+            ['Council Bluff', 'SW Washington', 3.4, 'Moderate', '4200ft', '5400ft', '1200ft', 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
+            ['Council Bluff', 'SW Washington', 3.4, 'Moderate', '4200ft', '5400ft', '1200ft', 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
+            ['Angels Rest', 'Columbia Gorge', 4.4, 'Difficult', '200ft', '3400ft', '3200ft', 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
+            ['Angels Rest', 'Columbia Gorge', 4.4, 'Difficult', '200ft', '3400ft', '3200ft', 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
+            ['Angels Rest', 'Columbia Gorge', 4.4, 'Difficult', '200ft', '3400ft', '3200ft', 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
+            ['Angels Rest', 'Columbia Gorge', 4.4, 'Difficult', '200ft', '3400ft', '3200ft', 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
+            ['Angels Rest', 'Columbia Gorge', 4.4, 'Difficult', '200ft', '3400ft', '3200ft', 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
+            ['Emmigrant Lake Loop', 'Southern Oregon', 3.2, 'Easy', '2200ft', '2400ft', '200ft', 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
+            ['Emmigrant Lake Loop', 'Southern Oregon', 3.2, 'Easy', '2200ft', '2400ft', '200ft', 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
+            ['Emmigrant Lake Loop', 'Southern Oregon', 3.2, 'Easy', '2200ft', '2400ft', '200ft', 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
+            ['Emmigrant Lake Loop', 'Southern Oregon', 3.2, 'Easy', '2200ft', '2400ft', '200ft', 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
+            ['Emmigrant Lake Loop', 'Southern Oregon', 3.2, 'Easy', '2200ft', '2400ft', '200ft', 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
+            ['Three Sisters Tour', 'Central Oregon', 18.5, 'Difficult', '3800ft', '8200ft', '6200ft', 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
+            ['Three Sisters Tour', 'Central Oregon', 18.5, 'Difficult', '3800ft', '8200ft', '6200ft', 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
+            ['Three Sisters Tour', 'Central Oregon', 18.5, 'Difficult', '3800ft', '8200ft', '6200ft', 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
+            ['Three Sisters Tour', 'Central Oregon', 18.5, 'Difficult', '3800ft', '8200ft', '6200ft', 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
+            ['Three Sisters Tour', 'Central Oregon', 18.5, 'Difficult', '3800ft', '8200ft', '6200ft', 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
+            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', '6800ft', '8300ft', '1500ft', 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
+            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', '6800ft', '8300ft', '1500ft', 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
+            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', '6800ft', '8300ft', '1500ft', 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
+            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', '6800ft', '8300ft', '1500ft', 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
+            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', '6800ft', '8300ft', '1500ft', 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
+            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', '6800ft', '8300ft', '1500ft', 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
+            ['Tryon Creek', 'Portland Metro', 2.5, 'Easy', '600ft', '800ft', '200ft', 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
+            ['Tryon Creek', 'Portland Metro', 2.5, 'Easy', '600ft', '800ft', '200ft', 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
+            ['Tryon Creek', 'Portland Metro', 2.5, 'Easy', '600ft', '800ft', '200ft', 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
+            ['Tryon Creek', 'Portland Metro', 2.5, 'Easy', '600ft', '800ft', '200ft', 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
+            ['Tryon Creek', 'Portland Metro', 2.5, 'Easy', '600ft', '800ft', '200ft', 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
 
-                properties: {
-                    data: {
-                        type: Array,
-                        value: [
-                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
-                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
-                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
-                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
-                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
-                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
-                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
-                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
-                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
-                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
-                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
-                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
-                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i'],
-                            ['Council Bluff', 'SW Washington', '3.4mi', 'Difficult', '4200ft', '5400ft', '1200ft', 'd', "e", "f", 'g', 'h', 'i']
-                        ]
-                    }
-                },
+            ];
 
-                changeSortOrder: function(e) {
-                    console.log(this.$['grid-sorting-data'].sortOrder);
-                    var idx = this.$['grid-sorting-data'].sortOrder[0].column;
-                    var lesser = this.$['grid-sorting-data'].sortOrder[0].direction == 'asc' ? -1 : 1;
-                    this.data = this.data.sort(function (a, b) {
-                        return (a[idx] < b[idx]) ? lesser : -lesser;
-                    });
-                }
+          grid.items = data;
+
+          // Re-order the data array on sort-order-changed event
+          grid.addEventListener('sort-order-changed', function(e) {
+            e.preventDefault();
+
+            var idx = grid.sortOrder[0].column;
+            var lesser = grid.sortOrder[0].direction == 'asc' ? -1 : 1;
+            data.sort(function(a, b) {
+              return (a[idx] < b[idx]) ? lesser : -lesser;
             });
+          });
         </script>
-    </dom-module>
 
+    </dom-module>
 
   </body>
 </html>
