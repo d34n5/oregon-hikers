@@ -9,36 +9,33 @@
     <link rel="import" href="bower_components/vaadin-grid/vaadin-grid.html">
     <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 
-    <style>
+    <style is="custom-style">
+      * {
+          font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+
       #trails-body {
-        background-color: ivory;
+        background-color: #434433;
       }
 
       vaadin-grid {
           --primary-color: #3f990f;
+          height: 900px;
+      }
+
+      span {
+        overflow: visible;
+      }
+
+      .th {
+        text-align: center;
       }
 
     </style>
   </head>
   <body id="trails-body">
       <dom-module id="trails-grid">
-        <template>
-          <style include="shared-styles">
-            * {
-                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            }
 
-            vaadin-grid {
-                --primary-color: #3f990f;
-            }
-
-            span {
-                overflow: visible;
-            }
-
-          </style>
-        </template>
-        <p> Grid2:</p>
         <vaadin-grid frozen-columns="1" selection-mode="multi" items=[[data]] id="grid-sorting-data">
           <table>
             <colgroup>
@@ -58,11 +55,11 @@
               <tr>
                 <th class="th"><h3>Trail Name/Number</h3></th>
                 <th class="th"><h3>Location</h3></th>
-                <th class="th"><h3>Distance (mi.)</h3></th>
+                <th class="th"><h3>Distance<br>(mi.)</h3></th>
                 <th class="th"><h3>Difficulty</h3></th>
-                <th class="th"><h3>Elevation Start(ft.)</h3></th>
-                <th class="th"><h3>Elevation End(ft.)</h3></th>
-                <th class="th"><h3>Elevation +/-(ft.)</h3></th>
+                <th class="th"><h3>Elevation <br>Start(ft.)</h3></th>
+                <th class="th"><h3>Elevation <br>End(ft.)</h3></th>
+                <th class="th"><h3>Elevation <br>+/-(ft.)</h3></th>
                 <th class="th"><h3>TrailHead</h3></th>
                 <th class="th"><h3>Seasons</h3></th>
                 <th class="th"><h3>Type</h3></th>
@@ -76,37 +73,37 @@
           var grid = document.getElementById('grid-sorting-data');
 
           var data = [
-            ['Council Bluff', 'SW Washington', 3.4, 'Moderate', '4200ft', '5400ft', '1200ft', 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
-            ['Council Bluff', 'SW Washington', 3.4, 'Moderate', '4200ft', '5400ft', '1200ft', 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
-            ['Council Bluff', 'SW Washington', 3.4, 'Moderate', '4200ft', '5400ft', '1200ft', 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
-            ['Council Bluff', 'SW Washington', 3.4, 'Moderate', '4200ft', '5400ft', '1200ft', 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
-            ['Council Bluff', 'SW Washington', 3.4, 'Moderate', '4200ft', '5400ft', '1200ft', 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
-            ['Angels Rest', 'Columbia Gorge', 4.4, 'Difficult', '200ft', '3400ft', '3200ft', 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
-            ['Angels Rest', 'Columbia Gorge', 4.4, 'Difficult', '200ft', '3400ft', '3200ft', 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
-            ['Angels Rest', 'Columbia Gorge', 4.4, 'Difficult', '200ft', '3400ft', '3200ft', 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
-            ['Angels Rest', 'Columbia Gorge', 4.4, 'Difficult', '200ft', '3400ft', '3200ft', 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
-            ['Angels Rest', 'Columbia Gorge', 4.4, 'Difficult', '200ft', '3400ft', '3200ft', 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
-            ['Emmigrant Lake Loop', 'Southern Oregon', 3.2, 'Easy', '2200ft', '2400ft', '200ft', 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
-            ['Emmigrant Lake Loop', 'Southern Oregon', 3.2, 'Easy', '2200ft', '2400ft', '200ft', 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
-            ['Emmigrant Lake Loop', 'Southern Oregon', 3.2, 'Easy', '2200ft', '2400ft', '200ft', 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
-            ['Emmigrant Lake Loop', 'Southern Oregon', 3.2, 'Easy', '2200ft', '2400ft', '200ft', 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
-            ['Emmigrant Lake Loop', 'Southern Oregon', 3.2, 'Easy', '2200ft', '2400ft', '200ft', 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
-            ['Three Sisters Tour', 'Central Oregon', 18.5, 'Difficult', '3800ft', '8200ft', '6200ft', 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
-            ['Three Sisters Tour', 'Central Oregon', 18.5, 'Difficult', '3800ft', '8200ft', '6200ft', 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
-            ['Three Sisters Tour', 'Central Oregon', 18.5, 'Difficult', '3800ft', '8200ft', '6200ft', 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
-            ['Three Sisters Tour', 'Central Oregon', 18.5, 'Difficult', '3800ft', '8200ft', '6200ft', 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
-            ['Three Sisters Tour', 'Central Oregon', 18.5, 'Difficult', '3800ft', '8200ft', '6200ft', 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
-            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', '6800ft', '8300ft', '1500ft', 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
-            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', '6800ft', '8300ft', '1500ft', 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
-            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', '6800ft', '8300ft', '1500ft', 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
-            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', '6800ft', '8300ft', '1500ft', 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
-            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', '6800ft', '8300ft', '1500ft', 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
-            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', '6800ft', '8300ft', '1500ft', 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
-            ['Tryon Creek', 'Portland Metro', 2.5, 'Easy', '600ft', '800ft', '200ft', 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
-            ['Tryon Creek', 'Portland Metro', 2.5, 'Easy', '600ft', '800ft', '200ft', 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
-            ['Tryon Creek', 'Portland Metro', 2.5, 'Easy', '600ft', '800ft', '200ft', 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
-            ['Tryon Creek', 'Portland Metro', 2.5, 'Easy', '600ft', '800ft', '200ft', 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
-            ['Tryon Creek', 'Portland Metro', 2.5, 'Easy', '600ft', '800ft', '200ft', 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
+            ['Council Bluff', 'SW Washington', 3.4, 'Moderate', 4200, 5400, 1200, 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
+            ['Council Bluff', 'SW Washington', 3.4, 'Moderate', 4200, 5400, 1200, 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
+            ['Council Bluff', 'SW Washington', 3.4, 'Moderate', 4200, 5400, 1200, 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
+            ['Council Bluff', 'SW Washington', 3.4, 'Moderate', 4200, 5400, 1200, 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
+            ['Council Bluff', 'SW Washington', 3.4, 'Moderate', 4200, 5400, 1200, 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
+            ['Angels Rest', 'Columbia Gorge', 4.4, 'Difficult', 200, 3400, 3200, 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
+            ['Angels Rest', 'Columbia Gorge', 4.4, 'Difficult', 200, 3400, 3200, 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
+            ['Angels Rest', 'Columbia Gorge', 4.4, 'Difficult', 200, 3400, 3200, 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
+            ['Angels Rest', 'Columbia Gorge', 4.4, 'Difficult', 200, 3400, 3200, 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
+            ['Angels Rest', 'Columbia Gorge', 4.4, 'Difficult', 200, 3400, 3200, 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
+            ['Emmigrant Lake Loop', 'Southern Oregon', 3.2, 'Easy', 2200, 2400, 200, 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
+            ['Emmigrant Lake Loop', 'Southern Oregon', 3.2, 'Easy', 2200, 2400, 200, 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
+            ['Emmigrant Lake Loop', 'Southern Oregon', 3.2, 'Easy', 2200, 2400, 200, 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
+            ['Emmigrant Lake Loop', 'Southern Oregon', 3.2, 'Easy', 2200, 2400, 200, 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
+            ['Emmigrant Lake Loop', 'Southern Oregon', 3.2, 'Easy', 2200, 2400, 200, 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
+            ['Three Sisters Tour', 'Central Oregon', 18.5, 'Difficult', 3800, 8200, 6200, 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
+            ['Three Sisters Tour', 'Central Oregon', 18.5, 'Difficult', 3800, 8200, 6200, 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
+            ['Three Sisters Tour', 'Central Oregon', 18.5, 'Difficult', 3800, 8200, 6200, 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
+            ['Three Sisters Tour', 'Central Oregon', 18.5, 'Difficult', 3800, 8200, 6200, 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
+            ['Three Sisters Tour', 'Central Oregon', 18.5, 'Difficult', 3800, 8200, 6200, 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
+            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', 6800, 8300, 1500, 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
+            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', 6800, 8300, 1500, 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
+            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', 6800, 8300, 1500, 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
+            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', 6800, 8300, 1500, 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
+            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', 6800, 8300, 1500, 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
+            ['Hat Point Summit', 'Eastern Oregon', 5.5, 'Moderate', 6800, 8300, 1500, 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
+            ['Tryon Creek', 'Portland Metro', 2.5, 'Easy', 600, 800, 200, 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
+            ['Tryon Creek', 'Portland Metro', 2.5, 'Easy', 600, 800, 200, 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
+            ['Tryon Creek', 'Portland Metro', 2.5, 'Easy', 600, 800, 200, 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
+            ['Tryon Creek', 'Portland Metro', 2.5, 'Easy', 600, 800, 200, 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
+            ['Tryon Creek', 'Portland Metro', 2.5, 'Easy', 600, 800, 200, 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
 
             ];
 
