@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Oregon Hikers - Trails</title>
+
     <!--Dependencies-->
     <link rel="import" href="bower_components/polymer/polymer.html">
     <link rel="import" href="bower_components/vaadin-grid/vaadin-grid.html">
@@ -15,7 +16,8 @@
       }
 
       #trails-body {
-        background-color: #434433;
+        background-color: #343433;
+        color: #a9a9a0;
       }
 
       vaadin-grid {
@@ -31,11 +33,154 @@
         text-align: center;
       }
 
+
+
+
+      .footer-top {
+        background-color: #343433;
+        height: 150px;
+        color: #a9a9a0;
+        width: 90vw;
+        /*min-width: 750px;*/
+        margin: 0 auto;
+        padding: 2.5rem;
+        border-top: 2px solid #222;
+        border-bottom: 2px solid #222;
+        /*@media (max-width: 550px){
+          padding: 2.5rem 1rem;
+        }*/
+
+      }
+
+      .footer-bottom {
+        font-family: $font-stack-primary;
+        font-size: .9rem;
+        background-color: #343433;
+        height: 350px;
+        color: #a9a9a0;
+        width: 80vw;
+        padding: 2.5rem;
+        margin: 0 auto;
+        /*@media (max-width: 968px) {
+          padding: 2.5rem .5rem;
+        }*/
+      }
+
+      .bottom-container {
+        width: 100vw;
+        /*@media (min-width: 968px) {
+          width: 80vw;
+          margin: 0 auto;
+        }*/
+      }
+
+      .bottom-container li {
+        &:hover {
+          color: white;
+          cursor: pointer;
+        }
+      }
+
+      .footer-bottom li {
+        padding: 1.25rem 1.25rem 1.25rem 0rem;
+        border-bottom: 1px solid $darkgrey;
+      }
+
+      #big-logo {
+        float: right;
+        position: relative;
+        top: -90px;
+      }
+
+      #col-1, #col-2 {
+        width: 25%;
+        float: left;
+        margin: 0 5%;
+        /*@media (min-width: 968px) {
+          width: 25%;
+          margin: 0% 2%;
+        }*/
+      }
+
+      #icons {
+        display: block;
+        position: relative;
+        left: 20px;
+        top: 30px;
+        /*@media (min-width: 968px) {
+          top: 250px;
+          left: -500px;
+        }*/
+      }
+
+      #copyright {
+        display: block;
+        position: relative;
+        top: 60px;
+        left: 30px;
+        /*@media (min-width: 968px) {
+          top: 300px;
+          left: -500px;
+        }*/
+      }
+
+      #copy-top {
+        color: $white;
+        font-family: $font-stack-primary;
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin: 0 auto;
+        margin-top: 10px;
+        max-width: 1200px;
+        text-align: center;
+        /*// position: relative;
+        // left: -180px;
+        @media (max-width: 550px) {
+          font-size: 1.3rem;
+          text-align: center;
+        }*/
+      }
+
+      #email {
+        color: $green;
+        font-size: 1rem;
+        font-family: $font-stack-primary;
+      }
+
+      #contact-info {
+        color: $lightgrey;
+        font-family: $font-stack-primary;
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+
+      #copyright {
+        color: $green;
+        /*@media (min-width: 968px) {
+        position: relative;
+        top: 260px;
+        }*/
+      }
+
+      /*.bottom-content {
+        @media (min-width: 968px) {
+          display: inline-block;
+          position: relative;
+          bottom: 240px;
+          left: 540px;
+        }*/
+      }
+
+
+
+
+
     </style>
   </head>
   <body id="trails-body">
+    <div id='grid'>
       <dom-module id="trails-grid">
-
+        TRAILS
         <vaadin-grid frozen-columns="1" selection-mode="multi" items=[[data]] id="grid-sorting-data">
           <table>
             <colgroup>
@@ -122,6 +267,31 @@
         </script>
 
     </dom-module>
+    </div>
+
+    <div class="footer-top">
+      <p id="copy-top">
+        COPYRIGHT - Dean Scelza Design - 2016<br>
+        <span id="email">deanscelza@gmail.com</span>
+      </p>
+    </div>
+    <div class="footer-bottom">
+      <div class="bottom-container">
+        <ul id="col-1">
+          <li><a href="#top" style="color:inherit;text-decoration:none;">HOME</a></li>
+          <li>FORUM</li>
+          <li>ARTICLES</li>
+          <li>ABOUT</li>
+        </ul>
+        <ul id="col-2">
+          <li>FAQ</li>
+          <li>TRAILS</li>
+          <li>MAPS</li>
+          <li>CONTACT</li>
+        </ul>
+        <span id="big-logo"><img src="img/oregon-icon-comp.png" alt="" /></span>
+      </div>
+    </div>
 
   </body>
 </html>
