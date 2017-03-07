@@ -21,57 +21,37 @@
       }
 
       vaadin-grid {
-          --primary-color: #3f990f;
-          height: 900px;
+        --primary-color: #3f990f;
+        height: 800px;
+        width: 99%;
+        margin: 0 auto;
       }
 
       span {
         overflow: visible;
       }
 
-      .th {
-        text-align: center;
+      #grid-sorting-data {
+        background-color: white;
       }
-
 
 
 
       .footer-top {
         background-color: #343433;
-        height: 150px;
+        height: 100px;
         color: #a9a9a0;
-        width: 90vw;
-        /*min-width: 750px;*/
-        margin: 0 auto;
         padding: 2.5rem;
         border-top: 2px solid #222;
         border-bottom: 2px solid #222;
-        /*@media (max-width: 550px){
-          padding: 2.5rem 1rem;
-        }*/
-
       }
 
       .footer-bottom {
-        font-family: $font-stack-primary;
         font-size: .9rem;
         background-color: #343433;
-        height: 350px;
+        height: 250px;
         color: #a9a9a0;
-        width: 80vw;
         padding: 2.5rem;
-        margin: 0 auto;
-        /*@media (max-width: 968px) {
-          padding: 2.5rem .5rem;
-        }*/
-      }
-
-      .bottom-container {
-        width: 100vw;
-        /*@media (min-width: 968px) {
-          width: 80vw;
-          margin: 0 auto;
-        }*/
       }
 
       .bottom-container li {
@@ -87,30 +67,16 @@
       }
 
       #big-logo {
-        float: right;
         position: relative;
-        top: -90px;
+        right: 30px;
+        top: 80px;
       }
 
-      #col-1, #col-2 {
+      #col-1,
+      #col-2 {
         width: 25%;
         float: left;
-        margin: 0 5%;
-        /*@media (min-width: 968px) {
-          width: 25%;
-          margin: 0% 2%;
-        }*/
-      }
-
-      #icons {
-        display: block;
-        position: relative;
-        left: 20px;
-        top: 30px;
-        /*@media (min-width: 968px) {
-          top: 250px;
-          left: -500px;
-        }*/
+        margin: 0 5% 0 10%;
       }
 
       #copyright {
@@ -118,62 +84,34 @@
         position: relative;
         top: 60px;
         left: 30px;
-        /*@media (min-width: 968px) {
-          top: 300px;
-          left: -500px;
-        }*/
       }
 
       #copy-top {
-        color: $white;
-        font-family: $font-stack-primary;
+        color: white;
         font-weight: bold;
         font-size: 1.5rem;
         margin: 0 auto;
-        margin-top: 10px;
-        max-width: 1200px;
+        /*margin-top: 10px;
+        max-width: 1200px;*/
         text-align: center;
-        /*// position: relative;
-        // left: -180px;
-        @media (max-width: 550px) {
-          font-size: 1.3rem;
-          text-align: center;
-        }*/
       }
 
       #email {
-        color: $green;
+        color: #3f990f;
         font-size: 1rem;
-        font-family: $font-stack-primary;
       }
 
       #contact-info {
-        color: $lightgrey;
-        font-family: $font-stack-primary;
+        color: #a9a9a0;
         font-size: 1.2rem;
         line-height: 2rem;
       }
 
       #copyright {
-        color: $green;
-        /*@media (min-width: 968px) {
-        position: relative;
-        top: 260px;
-        }*/
+        color: #3f990f;
       }
 
-      /*.bottom-content {
-        @media (min-width: 968px) {
-          display: inline-block;
-          position: relative;
-          bottom: 240px;
-          left: 540px;
-        }*/
-      }
-
-
-
-
+    }
 
     </style>
   </head>
@@ -277,13 +215,13 @@
     </div>
     <div class="footer-bottom">
       <div class="bottom-container">
-        <ul id="col-1">
-          <li><a href="#top" style="color:inherit;text-decoration:none;">HOME</a></li>
+        <ul id="col-1" style="list-style: none;">
+          <li><a href="index.html" style="color:inherit;text-decoration:none;">HOME</a></li>
           <li>FORUM</li>
           <li>ARTICLES</li>
           <li>ABOUT</li>
         </ul>
-        <ul id="col-2">
+        <ul id="col-2" style="list-style: none;">
           <li>FAQ</li>
           <li>TRAILS</li>
           <li>MAPS</li>
