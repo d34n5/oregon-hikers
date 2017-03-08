@@ -8,6 +8,19 @@
     <!--Dependencies-->
     <link rel="import" href="bower_components/polymer/polymer.html">
     <link rel="import" href="bower_components/vaadin-grid/vaadin-grid.html">
+
+    <link rel="import" href="bower_components/paper-styles/paper-styles.html">
+    <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+    <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/iron-icon/iron-icon.html">
+    <link rel="import" href="bower_components/paper-material/paper-material.html">
+    <link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
+    <link rel="import" href="bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html">
+    <link rel="import" href="bower_components/iron-checked-element-behavior/iron-checked-element-behavior.html">
+
+
     <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 
     <style is="custom-style">
@@ -37,9 +50,111 @@
 
 
 
+
+      paper-toolbar {
+          background-color: #a9a9a0;
+          color: #3f990f
+          width: 99%;
+
+          min-width: 300px;
+      }
+
+      paper-icon-button {
+          height: 40px;
+          width: 40px;
+      }
+
+      paper-menu-button.button {
+          padding: 0;
+          margin: 0;
+      }
+
+      paper-button:active {
+          background-color: #e3e3e3;
+      }
+
+      .desktop-buttons {
+          margin-left: 28px;
+      }
+
+      #parent {
+          margin: 8px 16px;
+      }
+
+      /*Sync Icons*/
+      .socialMedia {
+          margin-right: 8px;
+          width: 20px;
+      }
+
+      /*Style buttons on Tablets & Desktops*/
+      #right-buttons {
+          float: right;
+          margin: 8px 8px 12px 8px;
+      }
+
+      #left-buttons {
+          float: left;
+          margin: 8px 8px 12px 8px;
+      }
+
+      /* Tooltip container */
+      .tooltip {
+          position: relative;
+          display: inline-block;
+      }
+
+      /* Tooltip text */
+      .tooltip .tooltiptext {
+          visibility: hidden;
+          width: 70px;
+          background-color: #3f990f;
+          color: #fff;
+          text-align: center;
+          padding: 5px 0;
+          border-radius: 6px;
+
+          /* Position the tooltip text */
+          position: absolute;
+          z-index: 1;
+          bottom: 90%;
+          left: 112%;
+          margin-left: -60px;
+
+          /* Fade in tooltip */
+          opacity: 0;
+          transition: opacity 1s;
+      }
+
+      /* Tooltip arrow */
+      .tooltip .tooltiptext::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #3f990f transparent transparent transparent;
+      }
+
+      /* Show the tooltip text when you mouse over the tooltip container */
+      .tooltip:hover .tooltiptext {
+          visibility: visible;
+          opacity: 1;
+      }
+
+      .tooltip:active .tooltiptext {
+          visibility: visible;
+          opacity: 1;
+      }
+
+
+
+
       .footer-top {
         background-color: #343433;
-        height: 100px;
+        height: 60px;
         color: #a9a9a0;
         padding: 2.5rem;
         border-top: 2px solid #222;
@@ -118,7 +233,42 @@
   <body id="trails-body">
     <div id='grid'>
       <dom-module id="trails-grid">
-        TRAILS
+        <div id="header">
+        <h2 style="text-align: center;">TRAILS</h2>
+      </div>
+
+        <paper-toolbar>
+            <!--Mobile View-->
+                <div id="parent" class="mobile bottom fit">
+                    <div style$="display: [[xDisplay]]">
+                        <div class="tooltip"> <paper-icon-button icon="unarchive"></paper-icon-button>
+                            <span class="tooltiptext">FAVORITE</span>
+                        </div>
+
+                        <div class="tooltip"> <paper-icon-button icon="add-box"></paper-icon-button>
+                            <span class="tooltiptext">SHAR</span>
+                        </div>
+
+                        <div class="tooltip"> <paper-icon-button icon="delete"></paper-icon-button>
+                            <span class="tooltiptext">DELETE</span>
+                        </div>
+                    </div>
+                </div>
+            <!--Tablet & Desktop View-->
+                <div class="desktop bottom fit desktop-buttons">
+                    <div style$="display: [[yDisplay]]">
+                        <span id="left-buttons">
+                        <paper-button class="bottom"><iron-icon icon="unarchive"></iron-icon><span style$="display: [[sDisplay]]">&nbsp;SHARE</span></paper-button>
+                        <paper-button class="bottom"><iron-icon icon="mail"></iron-icon><span style$="display: [[sDisplay]]">&nbsp;EMAIL</span></paper-button>
+                        <paper-button class="bottom"><iron-icon icon="delete"></iron-icon><span style$="display: [[sDisplay]]">DELETE</span></paper-button>
+                        </span>
+                        <span id="right-buttons">
+                            <paper-button class="bottom right"><iron-icon icon="add-box"></iron-icon><span style$="display: [[sDisplay]]">&nbsp;ADD</span></paper-button>
+                        </span>
+                    </div>
+                </div>
+        </paper-toolbar>
+
         <vaadin-grid frozen-columns="1" selection-mode="multi" items=[[data]] id="grid-sorting-data">
           <table>
             <colgroup>
@@ -129,10 +279,10 @@
               <col sortable resizable hidable hidden flex="1" class="col">
               <col sortable resizable hidable hidden flex="1" class="col">
               <col sortable resizable hidable flex="1" class="col">
+              <col sortable resizable hidable hidden flex="1" class="col">
+              <col sortable resizable hidable hidden flex="1" class="col">
               <col sortable resizable hidable flex="1" class="col">
-              <col sortable resizable hidable flex="1" class="col">
-              <col sortable resizable hidable flex="1" class="col">
-              <col sortable resizable hidable flex="1" class="col">
+              <col sortable resizable hidable hidden flex="1" class="col">
             </colgroup>
             <thead>
               <tr>
