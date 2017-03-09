@@ -17,6 +17,12 @@ $text-shadow: 1px 2px 1.5px black;
   box-sizing: border-box;
 }
 
+.th {
+  overflow: hidden;
+  position: relative;
+  top: -5px;
+}
+
 #body {
   background-color: #343433;
   color: #a9a9a0;
@@ -29,12 +35,13 @@ $text-shadow: 1px 2px 1.5px black;
 #grid-header {
   color: #a9a9a0;
   font-size: 32px;
-  padding: 24px;
+  padding: 24px 24px 16px 24px;
 }
 
 #left-buttons {
     float: left;
     margin: 8px 4px;
+    margin-bottom: 12px;
     position: relative;
     top: 4px;
     left: 4px;
