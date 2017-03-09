@@ -26,7 +26,6 @@ h1 {
 
 .mid-nav {
   display: none;
-  height: 70px;
   width: 100vw;
   border-top: 1px solid $black;
   // background-image: url("../img/footer-background.jpg");
@@ -34,7 +33,8 @@ h1 {
   @media (min-width: 968px) {
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    height: 90px;
+    padding-bottom: 25px;
   }
 }
 
@@ -115,7 +115,7 @@ h1 {
   width: 45px;
   position: relative;
   top: 22px;
-  left: 23px;
+  left: 22px;
 }
 
 #small-logo {
@@ -132,7 +132,7 @@ h1 {
   top: 120px;
   left: -50%;
   display: none;
-  @media (min-width: 968px) {
+  @media (min-width: 868px) {
     display: inline-block;
 }
 

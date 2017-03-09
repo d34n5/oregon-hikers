@@ -7,7 +7,7 @@
 }
 
 @media (min-width: 968px) {
-  .nav-bar ul {
+  .mid-nav {
     display: flex;
     align-items: center;
   }
@@ -45,6 +45,7 @@
 }
 
 .s-oregon {
+  margin-top: 24px;
   background-image: url("../img/winter1-comp.jpg");
   @media (min-width: 968px) {
     width: 96%
@@ -82,6 +83,7 @@
 .e-oregon {
   background-image: url("../img/hiking1-comp.jpg");
   width: 96%;
+  margin-top: 24px;
   @media (min-width: 968px) {
     width: 58%;
   }
@@ -94,6 +96,7 @@
   background-image: url("../img/c-oregon1-comp.jpg");
   background-position: center;
   width: 96%;
+  margin-top: 24px;
   @media (min-width: 968px) {
     width: 34%;
   }
@@ -113,6 +116,7 @@
 }
 
 .c-oregon {
+  margin-top: 24px;
   background-image: url("../img/alpine2-comp.jpg");
   @media (min-width: 968px) {
     width: 96%;

@@ -46,10 +46,86 @@ table {
   border-spacing: 0; }
 
 * {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   box-sizing: border-box; }
 
-body {
-  background-color: #343433; }
+#body {
+  background-color: #343433;
+  color: #a9a9a0; }
+
+#grid-sorting-data {
+  background-color: white; }
+
+#grid-header {
+  color: #a9a9a0;
+  font-size: 32px;
+  padding: 24px; }
+
+#left-buttons {
+  float: left;
+  margin: 8px 4px;
+  position: relative;
+  top: 4px;
+  left: 4px; }
+
+.footer-top {
+  background-color: #343433;
+  height: 60px;
+  color: #a9a9a0;
+  padding: 2.5rem;
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222; }
+
+.footer-bottom {
+  font-size: .9rem;
+  background-color: #343433;
+  height: 250px;
+  color: #a9a9a0;
+  padding: 2.5rem; }
+
+.bottom-container li:hover {
+  color: white;
+  cursor: pointer; }
+
+.footer-bottom li {
+  padding: 1.25rem 1.25rem 1.25rem 0rem;
+  border-bottom: 1px solid #343433; }
+
+#big-logo {
+  position: relative;
+  right: 30px;
+  top: 80px; }
+
+#col-1,
+#col-2 {
+  width: 25%;
+  float: left;
+  margin: 0 5% 0 10%; }
+
+#copyright {
+  display: block;
+  position: relative;
+  top: 60px;
+  left: 30px; }
+
+#copy-top {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  text-align: center; }
+
+#email {
+  color: #3f990f;
+  font-size: 1rem; }
+
+#contact-info {
+  color: #a9a9a0;
+  font-size: 1.2rem;
+  line-height: 2rem; }
+
+#copyright {
+  color: #3f990f; }
 
 .container {
   display: flex;
@@ -58,7 +134,7 @@ body {
   overflow: hidden; }
 
 @media (min-width: 968px) {
-  .nav-bar ul {
+  .mid-nav {
     display: flex;
     align-items: center; }
 
@@ -74,7 +150,7 @@ body {
 .c-oregon, .s-oregon {
   height: 420px;
   width: 96%;
-  margin: 2%;
+  margin: 4% 2%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -88,6 +164,7 @@ body {
       transition: all .2s ease-in-out; }
 
 .s-oregon {
+  margin-top: 24px;
   background-image: url("../img/winter1-comp.jpg"); }
   @media (min-width: 968px) {
     .s-oregon {
@@ -103,7 +180,7 @@ body {
   background-repeat: no-repeat;
   color: #fff;
   padding: 20px;
-  margin: 2%; }
+  margin: 4% 2%; }
   .e-oregon:hover .icon-bg, .col-gorge:hover .icon-bg, .sw-washington:hover .icon-bg, .portland:hover .icon-bg, .portland:hover .icon-bg, .col-gorge:hover .icon-bg {
     cursor: pointer;
     transform: scale(1.3);
@@ -118,7 +195,8 @@ body {
 
 .e-oregon, .col-gorge {
   background-image: url("../img/hiking1-comp.jpg");
-  width: 96%; }
+  width: 96%;
+  margin-top: 24px; }
   @media (min-width: 968px) {
     .e-oregon, .col-gorge {
       width: 58%; } }
@@ -129,7 +207,8 @@ body {
 .sw-washington, .portland {
   background-image: url("../img/c-oregon1-comp.jpg");
   background-position: center;
-  width: 96%; }
+  width: 96%;
+  margin-top: 24px; }
   @media (min-width: 968px) {
     .sw-washington, .portland {
       width: 34%; } }
@@ -144,6 +223,7 @@ body {
   background-image: url("../img/waterfall1-comp.jpg"); }
 
 .c-oregon {
+  margin-top: 24px;
   background-image: url("../img/alpine2-comp.jpg"); }
   @media (min-width: 968px) {
     .c-oregon {
@@ -175,14 +255,14 @@ h1 {
 
 .mid-nav {
   display: none;
-  height: 70px;
   width: 100vw;
   border-top: 1px solid #000; }
   @media (min-width: 968px) {
     .mid-nav {
       display: flex;
       justify-content: space-between;
-      height: 100px; } }
+      height: 90px;
+      padding-bottom: 25px; } }
 
 .mid-nav ul {
   display: flex;
@@ -251,7 +331,7 @@ h1 {
   width: 45px;
   position: relative;
   top: 22px;
-  left: 23px; }
+  left: 22px; }
 
 #small-logo {
   float: left;
@@ -266,7 +346,7 @@ h1 {
   top: 120px;
   left: -50%;
   display: none; }
-  @media (min-width: 968px) {
+  @media (min-width: 868px) {
     #big-logo img {
       display: inline-block; } }
   #big-logo img #oregon {
