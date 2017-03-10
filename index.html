@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Oregon Hikers ReDesign</title>
     <link rel="stylesheet" href="css/app.css" media="screen" title="no title">
-
     <link rel="import" href="bower_components/polymer/polymer.html">
     <link rel="import" href="bower_components/vaadin-grid/vaadin-grid.html">
     <link rel="import" href="bower_components/paper-styles/paper-styles.html">
@@ -13,23 +12,19 @@
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
     <link rel="import" href="bower_components/iron-icons/iron-icons.html">
-    <!-- <link rel="import" href="bower_components/iron-icon/share-icons.html"> -->
-    <!-- <link rel="import" href="bower_components/iron-behaviors/iron-behaviors.html"> -->
-    <!-- <link rel="import" href="bower_components/paper-behaviors/paper-behaviors.html"> -->
     <link rel="import" href="bower_components/paper-material/paper-material.html">
     <link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
     <link rel="import" href="bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html">
     <link rel="import" href="bower_components/iron-checked-element-behavior/iron-checked-element-behavior.html">
-
     <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 
     <style is="custom-style">
-
       vaadin-grid {
         --primary-color: #3f990f;
         background-color: white;
         height: 800px;
         width: 99%;
+        min-width: 270px;
         margin: 0 auto;
         overflow: hidden;
       }
@@ -64,7 +59,7 @@
           <ul id="nav-list">
             <li>HOME</li>
             <li>FORUM</li>
-            <li><a href="#trails" style="color:inherit; text-decoration:none;">TRAILS</a></li>
+            <li><a href="#trails" style="color: inherit; text-decoration:none;">TRAILS</a></li>
             <li>MAPS</li>
             <li>CONTACT</li>
           </ul>
@@ -85,7 +80,7 @@
           <li><a href="#col-gorge" style="color:inherit;text-decoration:none;">Columbia&nbsp;Gorge</a></li>
           <li><a href="#c-oregon" style="color:inherit;text-decoration:none;">Central&nbsp;Oregon</a></li>
           <li>|</li>
-          <li id='green-text'>More</li>
+          <li id='green-text'><a href="#trails" style="color:inherit; text-decoration:none;">Trails</a></li>
         </ul>
       </div>
 
@@ -152,9 +147,9 @@
         </div>
 
         <dom-module id="trails-grid">
+          <a name="trails"></a>
           <div id="grid-header">
             <h1 style="text-align: center;">TRAILS</h1>
-            <a name="trails"></a>
           </div>
           <div id='grid'>
             <paper-toolbar>
@@ -202,38 +197,38 @@
               </table>
             </vaadin-grid>
             </template>
+
             <script>
               var grid = document.getElementById('grid-sorting-data');
 
               var data = [
                 ['Council Bluff', 'SW Washington', '3.4 miles', 'Moderate', '4200ft.', '5400ft.', '1200ft.', 'Council Lake TH', "Summer/Fall", "Viewpoint", 'Never Crowded'],
-                ['Ape Cave', 'SW Washington', '1.5 miles', 'Easy', '2500ft.', '2700ft.', '200ft.', 'Ape Cave', "All Seasons", "Geologic Feature", 'Often Crowded'],
-                ['Catherine Creek Loop', 'SW Washington', '4.5 miles', 'Moderate', '500ft.', '1700ft.', '1200ft.', 'Catherine Creek', "All Seasons", "Viewpoint", 'Ocassionally Crowded'],
+                ['Ape Cave', 'SW Washington', '1.5 miles', 'Easy', '2500ft.', '3700ft.', '1200ft.', 'Ape Cave', "All Seasons", "Geologic Feature", 'Often Crowded'],
+                ['Catherine Creek Loop', 'SW Washington', '4.5 miles', 'Moderate', '1500ft.', '2700ft.', '1200ft.', 'Catherine Creek', "All Seasons", "Viewpoint", 'Ocassionally Crowded'],
                 ['Indian Racetrack', 'SW Washington', '6.4 miles', 'Moderate', '2500ft.', '3600ft.', '1100ft.', 'Pacific Crest Trail', "Summer/Fall", "Historic Feature", 'Rarely Crowded'],
-                ['Sheep Canyon', 'SW Washington', '13.5 miles', 'Difficult', '3500ft.', '5700ft.', '2200ft.', 'Lookout Ridge', "Summer Only", "Geologic Feature", 'Ocassionally Crowded'],
-                ['Angels Rest', 'Columbia Gorge', '4.4 miles', 'Difficult', '200ft.', '3400ft.', '3200ft.', 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
-                ['Bear Lake', 'Columbia Gorge', '4.6 miles', 'Easy', '2600ft.', '3400ft.', '800ft.', 'Bull Run', "Summer/Fall", "Lake", 'Rarely Crowded'],
-                ['PunchBowl Falls', 'Columbia Gorge', '5.7 miles', 'Moderate', '800ft.', '1700ft.', '900ft.', 'Bonneville Dam TH', "All Seasons", "Waterfall", 'Usually Crowded'],
-                ['Larch Mountain', 'Columbia Gorge', '17.4 miles', 'Difficult', '200ft.', '3400ft.', '3200ft.', 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
-                ['Silver Star Mountain', 'Columbia Gorge', '7.1 miles', 'Difficult', '600ft.', '2900ft.', '2300ft.', 'SilverStar', "Summer/Fall", "Viewpoint", 'Rarely Crowded'],
-                ['Emmigrant Lake Loop', 'Southern Oregon', '3.2 miles', 'Easy', '2200ft.', '2400ft.', '200ft.', 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
-                ['Pilot Rock', 'Southern Oregon', '3.2 miles', 'Moderate', '3800ft.', '4600ft.', '800ft.', 'Pilot Rock TH', 'Summer/Fall', "Viewpoint", "Rarely Crowded"],
+                ['Sheep Canyon', 'SW Washington', '9.5 miles', 'Difficult', '3500ft.', '5700ft.', '2200ft.', 'Lookout Ridge', "Summer Only", "Geologic Feature", 'Ocassionally Crowded'],
+                ['Angels Rest', 'Columbia Gorge', '4.4 miles', 'Difficult', '1200ft.', '3400ft.', '1200ft.', 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
+                ['Bear Lake', 'Columbia Gorge', '4.6 miles', 'Easy', '2600ft.', '4400ft.', '1800ft.', 'Bull Run', "Summer/Fall", "Lake", 'Rarely Crowded'],
+                ['PunchBowl Falls', 'Columbia Gorge', '5.7 miles', 'Moderate', '1100ft.', '2700ft.', '1600ft.', 'Bonneville Dam TH', "All Seasons", "Waterfall", 'Usually Crowded'],
+                ['Larch Mountain', 'Columbia Gorge', '7.4 miles', 'Difficult', '1200ft.', '4400ft.', '3200ft.', 'Bonneville Dam TH', "All Seasons", "Viewpoint", 'Usually Crowded'],
+                ['Silver Star Mountain', 'Columbia Gorge', '7.1 miles', 'Difficult', '1600ft.', '3900ft.', '2300ft.', 'SilverStar', "Summer/Fall", "Viewpoint", 'Rarely Crowded'],
+                ['Emmigrant Lake Loop', 'Southern Oregon', '3.2 miles', 'Easy', '2200ft.', '3300ft.', '1100ft.', 'Emmigrant Lake TH', 'All Seasons', "Lake Loop", "Rarely Crowded"],
+                ['Pilot Rock', 'Southern Oregon', '3.2 miles', 'Moderate', '3400ft.', '4900ft.', '1500ft.', 'Pilot Rock TH', 'Summer/Fall', "Viewpoint", "Rarely Crowded"],
                 ['Grizzly Peak', 'Southern Oregon', '5.9 miles', 'Difficult', '4200ft.', '6400ft.', '2200ft.', 'Emmigrant Lake TH', 'Summer/Fall', "Viewpoint", "Rarely Crowded"],
-                ['Rogue River', 'Southern Oregon', '13.2 miles', 'Easy', '2200ft.', '3400ft.', '1200ft.', 'Valley of the Rogue', 'All Seasons', "Riverside", "Rarely Crowded"],
-                ['Three Sisters Tour', 'Central Oregon', '18.5 miles', 'Difficult', '3800ft.', '8200ft.', '6200ft.', 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
+                ['Rogue River', 'Southern Oregon', '9.2 miles', 'Easy', '2200ft.', '3400ft.', '1200ft.', 'Valley of the Rogue', 'All Seasons', "Riverside", "Rarely Crowded"],
+                ['Three Sisters Tour', 'Central Oregon', '8.5 miles', 'Difficult', '3800ft.', '8200ft.', '6200ft.', 'Sisters Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
                 ['Bull of the Woods', 'Central Oregon', '8.5 miles', 'Moderate', '3000ft.', '5200ft.', '2200ft.', 'Willamette NF', 'Summer Only', "Lake", "Never Crowded"],
-                ['Jefferson Park Loop', 'Central Oregon', '13.5 miles', 'Difficult', '3900ft.', '7200ft.', '4200ft.', 'Mt Jefferson Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
-                ['Opal Creek', 'Central Oregon', '10.5 miles', 'Moderate', '1800ft.', '3200ft.', '1400ft.', 'Opal Creek', 'Summer/Fall', "Waterfalls", "Ocassionally Crowded"],
+                ['Jefferson Park Loop', 'Central Oregon', '7.5 miles', 'Difficult', '3900ft.', '7200ft.', '4200ft.', 'Mt Jefferson Wilderness', 'Summer Only', "Alpine Backpack", "Never Crowded"],
+                ['Opal Creek', 'Central Oregon', '9.7 miles', 'Moderate', '1800ft.', '3200ft.', '1400ft.', 'Opal Creek', 'Summer/Fall', "Waterfalls", "Ocassionally Crowded"],
                 ['Hat Point Summit', 'Eastern Oregon', '5.5 miles', 'Moderate', '6800ft.', '8300ft.', '1500ft.', 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
-                ['Cottonwood Canyon', 'Eastern Oregon', '3.8 miles', 'Moderate', '800ft.', '1300ft.', '500ft.', 'Hells Canyon TH', 'Spring/Summer/Fall', "Viewpoint", "Never Crowded"],
+                ['Cottonwood Canyon', 'Eastern Oregon', '3.8 miles', 'Moderate', '800ft.', '1900ft.', '1100ft.', 'Hells Canyon TH', 'Spring/Summer/Fall', "Viewpoint", "Never Crowded"],
                 ['Lookout Mountain', 'Eastern Oregon', '8.1 miles', 'Moderate', '1800ft.', '3600ft.', '1800ft.', 'Hells Canyon TH', 'Summer Only', "Viewpoint", "Never Crowded"],
-                ['Strawberry Lake', 'Eastern Oregon', '6.3 miles', 'Moderate', '2100ft.', '2600ft.', '500ft.', 'Hells Canyon TH', 'Summer/Fall', "Viewpoint", "Rarely Crowded"],
-                ['Tryon Creek', 'Portland Metro', '2.5 miles', 'Easy', '600ft.', '800ft.', '200ft.', 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
-                ['Wildwood Trail', 'Portland Metro', '22.5 miles', 'MOderate', '200ft.', '1200ft.', '2200ft.', 'Various', 'All Seasons', "Metro Park", "Often Crowded"],
-                ['Powell Butte Loop', 'Portland Metro', '5.2 miles', 'Easy', '400ft.', '900ft.', '1200ft.', 'Various', 'All Seasons', "Metro Park", "Often Crowded"],
-                ['Marquam Trail', 'Portland Metro', '9.5 miles', 'Moderate', '300ft.', '900ft.', '2200ft.', 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
-
-                ];
+                ['Strawberry Lake', 'Eastern Oregon', '6.3 miles', 'Moderate', '2100ft.', '3600ft.', '1500ft.', 'Hells Canyon TH', 'Summer/Fall', "Viewpoint", "Rarely Crowded"],
+                ['Tryon Creek', 'Portland Metro', '2.5 miles', 'Easy', '1100ft.', '1200ft.', '1200ft.', 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
+                ['Wildwood Trail', 'Portland Metro', '8.8 miles', 'Moderate', '1200ft.', '1200ft.', '2200ft.', 'Various', 'All Seasons', "Metro Park", "Often Crowded"],
+                ['Powell Butte Loop', 'Portland Metro', '5.2 miles', 'Easy', '1400ft.', '1900ft.', '1200ft.', 'Various', 'All Seasons', "Metro Park", "Often Crowded"],
+                ['Marquam Trail', 'Portland Metro', '5.9 miles', 'Moderate', '1300ft.', '1900ft.', '2200ft.', 'Various', 'All Seasons', "Metro Park", "Usually Crowded"],
+              ];
 
               grid.items = data;
 
@@ -248,31 +243,31 @@
                 });
               });
             </script>
-
-        </dom-module>
-      </div>
-
-      <div class="footer-top">
-        <p id="copy-top">
-          COPYRIGHT - Dean Scelza Design - 2016<br>
-          <span id="email">deanscelza@gmail.com</span>
-        </p>
-      </div>
-      <div class="footer-bottom">
-        <div class="bottom-container">
-          <ul id="col-1" style="list-style: none;">
-            <li><a href="index.html" style="color:inherit;text-decoration:none;">HOME</a></li>
-            <li>FORUM</li>
-            <li>ARTICLES</li>
-            <li>ABOUT</li>
-          </ul>
-          <ul id="col-2" style="list-style: none;">
-            <li>FAQ</li>
-            <li>TRAILS</li>
-            <li>MAPS</li>
-            <li>CONTACT</li>
-          </ul>
-          <span id="big-logo"><img src="img/oregon-icon-comp.png" alt="" /></span>
+          </dom-module>
+        </div>
+        <div class="footer-bottom">
+          <div class="bottom-container">
+            <ul id="col-1" style="list-style: none;">
+              <li><a href="index.html" style="color:inherit;text-decoration:none;">HOME</a></li>
+              <li>FORUM</li>
+              <li>ARTICLES</li>
+              <li>ABOUT</li>
+            </ul>
+            <ul id="col-2" style="list-style: none;">
+              <li>FAQ</li>
+              <li><a href="#trails" style="color: inherit; text-decoration:none;">TRAILS</a></li>
+              <li>MAPS</li>
+              <li>CONTACT</li>
+            </ul>
+            <span id="big-logo"><img src="img/oregon-icon-comp.png" alt="" /></span>
+          </div>
+        </div>
+        <div class="footer-top">
+          <p id="copy-top" style="font-size: 1rem;">
+            Copyright: Dean Scelza, 2017<br>
+            <br>
+            <span id="email">deanscelza@gmail.com</span>
+          </p>
         </div>
       </div>
     </div>

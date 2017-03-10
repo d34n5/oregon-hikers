@@ -106,3 +106,14 @@
       }
   }
 }
+
+#trail {
+  @extend #nav-list;
+  font-size: 1.4rem;
+  @media (min-width: 968px) {
+    font-size: 1.7rem;
+  }
+  @media (max-width: 550px) {
+    font-size: .9rem;
+  }
+}

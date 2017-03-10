@@ -267,8 +267,7 @@ h1 {
     .mid-nav {
       display: flex;
       justify-content: space-between;
-      height: 90px;
-      padding-bottom: 25px; } }
+      height: 90px; } }
 
 .mid-nav ul {
   display: flex;
@@ -365,7 +364,6 @@ h1 {
   height: 150px;
   color: #a9a9a0;
   width: 90vw;
-  margin: 0 auto;
   padding: 2.5rem;
   border-top: 2px solid #222;
   border-bottom: 2px solid #222; }
@@ -377,7 +375,7 @@ h1 {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: .9rem;
   background-color: #343433;
-  height: 350px;
+  height: 300px;
   color: #a9a9a0;
   width: 80vw;
   padding: 2.5rem;
@@ -436,18 +434,11 @@ h1 {
       left: -500px; } }
 
 #copy-top {
-  color: #fff;
+  color: #a9a9a0;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1.5rem;
   margin: 0 auto;
   margin-top: 10px;
-  max-width: 1200px;
-  text-align: center; }
-  @media (max-width: 550px) {
-    #copy-top {
-      font-size: 1.3rem;
-      text-align: center; } }
+  max-width: 1200px; }
 
 #email {
   color: #3f990f;
@@ -457,7 +448,6 @@ h1 {
 #contact-info {
   color: #a9a9a0;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 1.2rem;
   line-height: 2rem; }
 
 #copyright {
@@ -554,23 +544,32 @@ h1 {
   max-width: 900px;
   margin: 30px auto; }
 
-#nav-list {
+#nav-list, #trail {
   display: flex;
   position: relative;
   top: -60px;
   text-shadow: 1px 2px 1px black; }
-  #nav-list li {
+  #nav-list li, #trail li {
     font-size: 1.2rem;
     margin: 2px 15px; }
     @media (min-width: 968px) {
-      #nav-list li {
+      #nav-list li, #trail li {
         font-size: 1.5rem;
         position: relative;
         top: 10px;
         margin: 2px 20px; } }
     @media (max-width: 550px) {
-      #nav-list li {
+      #nav-list li, #trail li {
         font-size: .7rem;
         margin: 2px 10px; } }
+
+#trail {
+  font-size: 1.4rem; }
+  @media (min-width: 968px) {
+    #trail {
+      font-size: 1.7rem; } }
+  @media (max-width: 550px) {
+    #trail {
+      font-size: .9rem; } }
 
 /*# sourceMappingURL=app.css.map */
